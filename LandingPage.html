@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-group">
+                <a href="#" class="nav-link">
+                    <img src="Header/airplane.png" class="nav-icon">
+                    Find Flight
+                </a>
+                <a href="#" class="nav-link">
+                    <img src="Header/bed.png" class="nav-icon">
+                    Find Stays
+                </a>
+            </div>
+      
+            <div class="nav-logo">
+                <img src="Header/Logo1.png" alt="Golobe">
+            </div>
+      
+            <div class="nav-group">
+                <a href="#" class="nav-login">Login</a>
+                <a href="#" class="btn-signup">Sign up</a>
+            </div>
+        </nav>
+      
+        <div class="hero-content">
+            <h2 class="hero-subtitle">Helping Others</h2>
+            <h1 class="hero-title">LIVE & TRAVEL</h1>
+            <p class="hero-description">Special offers to suit your plan</p>
+        </div>
+    </header>
+
+    <!-- Search card -->
+    <div class="search-section">
+        <div class="search-card">
+            <div class="search-tabs">
+                <div class="search-tab active" id="tab-flights" onclick="switchTab('flights')">
+                    <img src="Header/airplane2.png" width="20"> 
+                    <span>Flights</span>
+                </div>
+                <div class="search-tab" id="tab-stays" onclick="switchTab('stays')">
+                    <img src="Header/bed2.png" width="20"> 
+                    <span>Stays</span>
+                </div>
+            </div>
+
+            <div id="flights-form">
+                <form class="search-inputs-row">
+                    <div class="input-group">
+                        <label>From - To</label>
+                        <div class="dual-input">
+                            <input list="cities" placeholder="From" class="clean-input">
+                            <span class="separator">-</span>
+                            <input list="cities" placeholder="To" class="clean-input">
+                        </div>
+                        <datalist id="cities">
+                            <option value="Istanbul">
+                            <option value="Sydney">
+                            <option value="Baku">
+                            <option value="Malé">
+                            <option value="Paris">
+                            <option value="New York">
+                            <option value="London">
+                            <option value="Tokyo">
+                            <option value="Dubai">
+                        </datalist>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Trip</label>
+                        <select class="clean-input">
+                            <option value="return">Return</option>
+                            <option value="oneway">One-way</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Depart - Return</label>
+                        <div class="dual-input">
+                            <input type="date" class="clean-input date-small">
+                            <span class="separator">-</span>
+                            <input type="date" class="clean-input date-small">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Passenger - Class</label>
+                        <div class="dual-input">
+                            <input type="number" min="1" value="1" class="clean-input clean-number">
+                            <span class="separator">,</span>
+                            <select class="clean-input">
+                                <option>Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="search-footer">
+                    <a href="#" class="add-promo">+ Add Promo Code</a>
+                    <button class="btn-show-flights">
+                        <img src="Header/plane.png" width="16" style="filter: brightness(0);"> 
+                        Show Flights
+                    </button>
+                </div>
+            </div>
+
+            <div id="stays-form" class="hidden">
+                <form class="search-inputs-row">
+                    <div class="input-group" style="flex: 2;">
+                        <label>Enter Destination</label>
+                        <div class="input-icon-wrapper">
+                            <img src="Header/bed2.png" width="16">
+                            <input list="cities" placeholder="Enter Destination" class="clean-input">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Check In</label>
+                        <input type="date" class="clean-input">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Check Out</label>
+                        <input type="date" class="clean-input">
+                    </div>
+
+                    <div class="input-group" style="flex: 1.5;">
+                        <label>Rooms & Guests</label>
+                        <div class="input-icon-wrapper">
+                            <img src="Header/user.png" width="16"> 
+                            <select class="clean-input">
+                                <option>1 room, 1 guest</option>
+                                <option>1 room, 2 guests</option>
+                                <option>2 rooms, 4 guests</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="search-footer">
+                    <a href="#" class="add-promo">+ Add Promo Code</a>
+                    <button class="btn-show-flights">
+                        <img src="Header/bed.png" width="16" style="filter: brightness(0);"> 
+                        Show Places
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plan your perfect trip -->
+    <section class="perfect-trip">
+        <div class="trip-header">
+            <div class="trip-title-group">
+                <h2 class="trip-title">Plan your perfect trip</h2>
+                <p class="trip-subtitle">Search Flights & Places Hire to our most popular destinations</p>
+            </div>
+            <a href="#" class="btn-see-more">See more places</a>
+        </div>
+
+        <div class="trip-grid">
+            <div class="trip-card">
+                <img src="Trip/Istanbul.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Istanbul, Turkey</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/Sydney.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Sydney, Australia</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/Baku.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Baku, Azerbaijan</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/Maldives.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Malé, Maldives</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/Paris.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Paris, France</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/NewYork.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>New York, US</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/London.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>London, UK</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/Tokyo.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+
+            <div class="trip-card">
+                <img src="Trip/Dubai.jpg" class="trip-image">
+                <div class="trip-info">
+                    <h3>Dubai, UAE</h3>
+                    <p>Flights • Hotels • Resorts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking options -->
+    <section class="booking-options">
+        <div class="booking-card" style="background-image: url('Trip/Flights.jpg');">
+            <div class="booking-content">
+                <h2 class="booking-title">Flights</h2>
+                <p class="booking-text">Search Flights & Places Hire to our most popular destinations</p>
+                <a href="#" class="btn-booking">
+                    <img src="Header/plane.png" width="16" style="filter: brightness(0);">
+                    Show Flights
+                </a>
+            </div>
+        </div>
+
+        <div class="booking-card" style="background-image: url('Trip/Hotels.jpg');">
+            <div class="booking-content">
+                <h2 class="booking-title">Hotels</h2>
+                <p class="booking-text">Search hotels & Places Hire to our most popular destinations</p>
+                <a href="#" class="btn-booking">
+                    <img src="Header/plane.png" width="16" style="filter: brightness(0);">
+                    Show Hotels
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews section -->
+    <section class="reviews-section">
+        <div class="trip-header">
+            <div class="trip-title-group">
+                <h2 class="trip-title">Reviews</h2>
+                <p class="trip-subtitle">What people says about Golobe facilities</p>
+            </div>
+            <a href="#" class="btn-see-more">See All</a>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-text">
+                    <h3>“A real sense of community, nurtured”</h3>
+                    <p>Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for...</p>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-author">
+                    <p class="author-name">Olga</p>
+                    <p class="author-desc">Weave Studios – Kai Tak</p>
+                </div>
+                <img src="Reviews/Reviews1.jpg" class="review-img">
+            </div>
+
+            <div class="review-card">
+                <div class="review-text">
+                    <h3>“The facilities are superb. Clean, slick, bright.”</h3>
+                    <p>“A real sense of community, nurtured” Really appreciate the help and support from the staff...</p>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-author">
+                    <p class="author-name">Thomas</p>
+                    <p class="author-desc">Weave Studios – Olympic</p>
+                </div>
+                <img src="Reviews/Reviews2.jpg" class="review-img">
+            </div>
+
+            <div class="review-card">
+                <div class="review-text">
+                    <h3>“A real sense of community, nurtured”</h3>
+                    <p>Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for...</p>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-author">
+                    <p class="author-name">Eliot</p>
+                    <p class="author-desc">Weave Studios – Kai Tak</p>
+                </div>
+                <img src="Reviews/Reviews3.jpg" class="review-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="subscribe-banner">
+            <div class="subscribe-content">
+                <h2>Subscribe Newsletter</h2>
+                <p class="sub-title">The Travel</p>
+                <p class="sub-text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <img src="Footer/mailbox.png" class="mailbox-img">
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="Footer/Logo2.png" alt="Golobe" class="footer-logo">
+                <div class="social-links">
+                    <a href="#"><img src="Footer/facebook.png" alt="FB"></a>
+                    <a href="#"><img src="Footer/twitter.png" alt="TW"></a>
+                    <a href="#"><img src="Footer/youtube.png" alt="YT"></a>
+                    <a href="#"><img src="Footer/instagram.png" alt="IG"></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Our Destinations</h4>
+                    <a href="#">Canada</a>
+                    <a href="#">Alaksa</a>
+                    <a href="#">France</a>
+                    <a href="#">Iceland</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Activities</h4>
+                    <a href="#">Northern Lights</a>
+                    <a href="#">Cruising & sailing</a>
+                    <a href="#">Multi-activities</a>
+                    <a href="#">Kayaing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Travel Blogs</h4>
+                    <a href="#">Bali Travel Guide</a>
+                    <a href="#">Sri Lanks Travel Guide</a>
+                    <a href="#">Peru Travel Guide</a>
+                    <a href="#">Bali Travel Guide</a>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Work with us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Work with us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabName) 
+        {
+            document.getElementById('tab-flights').classList.remove('active');
+            document.getElementById('tab-stays').classList.remove('active');
+            document.getElementById('flights-form').classList.add('hidden');
+            document.getElementById('stays-form').classList.add('hidden');
+            document.getElementById('tab-' + tabName).classList.add('active');
+            document.getElementById(tabName + '-form').classList.remove('hidden');
+        }
+    </script>
+    
+</body>
+</html>

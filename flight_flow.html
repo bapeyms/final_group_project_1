@@ -12,37 +12,43 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    @font-face {
-      font-family: Montserrat;
-      src: url(Montserrat.ttf);
-
-      font-family: TradeGothic;
-      src: url(TradeGothic.otf);
+    .hidden-class {
+      display: hidden;
     }
 
-    .nav {
+    @font-face {
+      font-family: 'Montserrat';
+      src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf) format(ttf),
+        url(fonts/Montserrat-VariableFont_wght.ttf) format(ttf);
+    }
+
+    #nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 40px;
+      margin: 1em 4em;
+      height: 60px;
+      font-weight: 500;
+      flex-wrap: wrap;
     }
 
-    .nav-left,
-    .nav-right {
+    #nav-left,
+    #nav-right {
       display: flex;
       align-items: center;
       gap: 20px;
     }
 
-    .nav a {
+    #nav a {
       display: flex;
       align-items: center;
       gap: 6px;
       text-decoration: none;
       color: #000;
+      height: 60px;
     }
 
-    .nav button {
+    #nav button {
       padding: 8px 16px;
       border-radius: 8px;
       background: #0f2b1d;
@@ -56,31 +62,439 @@
       height: 36px;
     }
 
-    .airplane-nav {
+    .nav-settings {
       width: 24px;
       height: 24px;
     }
 
-    .ion_bed.png {
-      width: 24px;
-      height: 24px;
+    #flight {
+      height: 100%;
+      border-bottom: 4px solid #8DD3BB;
+    }
+
+
+    @media screen and (max-width: 780px) {
+      #logo {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 0.5em;
+      }
+
+      #nav-left {
+        order: 2;
+      }
+
+      #nav-right {
+        order: 3;
+      }
+
+      .nav-p {
+        display: none;
+      }
+
+      #nav {
+        margin: 1em 2em;
+        justify-content: space-around;
+        gap: 10px;
+      }
+    }
+
+    .sec-slide {
+      width: 100%;
+      height: 80vh;
+      background-image: url("image.jpg");
+      background: linear-gradient(to right, rgba(25, 38, 122, 0.6) 0%, rgba(0, 0, 0, 0) 80%), url(image.jpg);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .sec-slide-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      position: absolute;
+      top: 10em;
+      margin-left: 5em;
+      color: #fff;
+      font-family: 'TradeGothic', sans-serif;
+      font-weight: 200;
+      font-size: 20px;
+    }
+
+    .sec-slide-text {
+      font-family: 'TradeGothic', sans-serif;
+      font-weight: 600;
+      font-size: 45px;
+    }
+
+    .places_map {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    .text_map {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      margin: 10px 0 0 5.7em;
+    }
+
+    .text_map p {
+      margin-top: 0.2em;
+    }
+
+    #btn_seeall {
+      display: block;
+      margin-right: 5.7em;
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: white;
+      border: 1px solid #8DD3BB;
+    }
+
+    #img_map {
+      margin-top: 1em;
+      width: 100%
+    }
+
+    .order {
+      position: absolute;
+      left: 50%;
+      bottom: -40px;
+      transform: translateX(-50%);
+      width: min(1235px, 80%);
+      border-radius: 15px;
+      padding: 30px;
+      height: auto;
+    }
+
+    .order-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 1.5em;
+      color: #000;
+      margin: 0.3em 0 1em 0;
+    }
+
+    .search-section {
+      padding: 0 50px;
+      position: relative;
+      z-index: 10;
+      margin-bottom: 80px;
+    }
+
+    .search-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+      margin-top: -100px;
+    }
+
+    .search-tabs {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #E0E0E0;
+      padding-bottom: 10px;
+    }
+
+    .search-tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #112211;
+      padding-bottom: 10px;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+
+    .search-tab.active {
+      border-bottom: 3px solid #8DD3BB;
+      color: #112211;
+      opacity: 1;
+    }
+
+    .search-inputs-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .input-group {
+      border: 1px solid #79747E;
+      border-radius: 4px;
+      padding: 8px 16px;
+      flex: 1;
+      position: relative;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 12px;
+      color: #112211;
+      margin-bottom: 4px;
+    }
+
+    .clean-input {
+      border: none;
+      outline: none;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #112211;
+      width: 100%;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .dual-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .dual-input .clean-input {
+      flex: 1;
+    }
+
+    .input-icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .separator {
+      color: #112211;
+      font-weight: 500;
+      padding: 0 4px;
+      flex-shrink: 0;
+    }
+
+    .date-small {
+      font-size: 14px;
+    }
+
+    .clean-number::-webkit-outer-spin-button,
+    .clean-number::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .clean-number {
+      width: 30px;
+      flex: none !important;
+    }
+
+    .search-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .add-promo {
+      text-decoration: none;
+      color: #112211;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn-show-flights {
+      background-color: #8DD3BB;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-show-flights:hover {
+      background-color: #7bc1a9;
     }
   </style>
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="nav-left">
-      <a href="#"><img src="airplane.png" class="airplane-nav">Find Flight</a>
-      <a href="#"><img src="ion_bed.png" class="ion_bed.png">Find Stays</a>
+  <nav id="nav">
+    <div id="nav-left">
+      <div id="flight">
+        <a href="#">
+          <img src="airplane.png" class="nav-settings">
+          <p class="nav-p">Find Flight</p>
+        </a>
+      </div>
+      <div id="stays">
+        <a href="#">
+          <img src="ion_bed.png" class="nav-settings">
+          <p class="nav-p">Find Stays</p>
+        </a>
+      </div>
     </div>
-    <img src="Logo.png" class="nav-logo">
-    <div class="nav-right">
+
+    <div id="logo">
+      <img src="Logo.png" class="nav-logo">
+    </div>
+    <div id="nav-right">
       <a href="#">Login</a>
       <button>Sign up</button>
     </div>
   </nav>
 
+  <div class="sec-slide">
+    <div class="sec-slide-content">
+      <div class="sec-slide-text">
+        <p>Make your travel</p>
+        <p>wishlist, we’ll do</p>
+        <p>the rest</p>
+      </div>
+      <p>Special offers to suit your plan</p>
+    </div>
+    <div class="order">
+      <div class="search-section">
+        <div class="search-card">
+          <p class="order-text">Where are you flying?</p>
+          <div id="flights-form">
+            <form class="search-inputs-row">
+              <div class="input-group">
+                <label>From - To</label>
+                <div class="dual-input">
+                  <input list="cities" placeholder="From" class="clean-input">
+                  <span class="separator">-</span>
+                  <input list="cities" placeholder="To" class="clean-input">
+                </div>
+                <datalist id="cities">
+                  <option value="Istanbul">
+                  <option value="Sydney">
+                  <option value="Baku">
+                  <option value="Malé">
+                  <option value="Paris">
+                  <option value="New York">
+                  <option value="London">
+                  <option value="Tokyo">
+                  <option value="Dubai">
+                </datalist>
+              </div>
+
+              <div class="input-group">
+                <label>Trip</label>
+                <select class="clean-input">
+                  <option value="return">Return</option>
+                  <option value="oneway">One-way</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label>Depart - Return</label>
+                <div class="dual-input">
+                  <input type="date" class="clean-input date-small">
+                  <span class="separator">-</span>
+                  <input type="date" class="clean-input date-small">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label>Passenger - Class</label>
+                <div class="dual-input">
+                  <input type="number" min="1" value="1" class="clean-input clean-number">
+                  <span class="separator">,</span>
+                  <select class="clean-input">
+                    <option>Economy</option>
+                    <option>Business</option>
+                    <option>First Class</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+            <div class="search-footer">
+              <a href="#" class="add-promo">+ Add Promo Code</a>
+              <button class="btn-show-flights">
+                <img src="Header/plane.png" width="16" style="filter: brightness(0);">
+                Show Flights
+              </button>
+            </div>
+          </div>
+
+          <div id="stays-form" class="hidden">
+            <form class="search-inputs-row">
+              <div class="input-group" style="flex: 2;">
+                <label>Enter Destination</label>
+                <div class="input-icon-wrapper">
+                  <img src="Header/bed2.png" width="16">
+                  <input list="cities" placeholder="Enter Destination" class="clean-input">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label>Check In</label>
+                <input type="date" class="clean-input">
+              </div>
+
+              <div class="input-group">
+                <label>Check Out</label>
+                <input type="date" class="clean-input">
+              </div>
+
+              <div class="input-group" style="flex: 1.5;">
+                <label>Rooms & Guests</label>
+                <div class="input-icon-wrapper">
+                  <img src="Header/user.png" width="16">
+                  <select class="clean-input">
+                    <option>1 room, 1 guest</option>
+                    <option>1 room, 2 guests</option>
+                    <option>2 rooms, 4 guests</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+            <div class="search-footer">
+              <a href="#" class="add-promo">+ Add Promo Code</a>
+              <button class="btn-show-flights">
+                <img src="Header/bed.png" width="16" style="filter: brightness(0);">
+                Show Places
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="places_map">
+    <div class="text_map">
+      <h2>Let's go places together</h2>
+      <p>Discover the latest offers and news and start planning your next trip with us.</p>
+    </div>
+    <button id="btn_seeall">See all</button>
+  </div>
+  <img src="Frame 2608705.png" id="img_map">
 </body>
 
 </html>

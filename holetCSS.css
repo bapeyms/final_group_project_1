@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.hidden-class{
+    display: hidden;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf) format(ttf),
+       url(fonts/Montserrat-VariableFont_wght.ttf) format(ttf);
+}
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 4em;
+    height: 60px;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+#nav-left, #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#nav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #000;
+    height: 60px;
+}
+
+#nav button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #0f2b1d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-logo {
+    width: 110.35px;
+    height: 36px;
+}
+
+.nav-settings {
+    width: 24px;
+    height: 24px;
+}
+
+#stays{
+    height: 100%;
+    border-bottom: 4px solid #8DD3BB;
+}
+
+
+@media screen and (max-width: 780px){
+    #logo{
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 0.5em;
+    }
+    #nav-left{
+        order: 2;
+
+    }
+    #nav-right{
+        order: 3;
+    }
+    .nav-p{
+        display: none;
+    }
+    #nav{
+        margin: 1em 2em;
+        justify-content: space-around;
+        gap: 10px;
+    }
+}

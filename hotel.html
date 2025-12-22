@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="holetCSS.css">
+</head>
+<body>
+    <div id="hotel-page">
+        <nav id="nav">
+            <div id="nav-left">
+                <a href="#">
+                    <img src="photos_hotel/airplane.png" class="nav-settings">
+                    <p class="nav-p">Find Flight</p>
+                </a>
+                    <div id="stays">
+                        <a href="#">
+                            <img src="photos_hotel/ion_bed.png" class="nav-settings">
+                            <p class="nav-p">Find Stays</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="logo">
+                    <img src="photos_hotel/Group.png" class="nav-logo">
+                </div>
+                
+                 <div id="nav-right">
+                    <a href="#">Login</a>
+                    <button>Sign up</button>
+                </div>
+        </nav>
+
+        <div id="back-photo">
+            <div id="header-text">
+                <h3>Make your travel wishlist, we'll do the rest</h3>
+                <h4>Special offers to suit your plan</h4>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-card">
+            <div class="search-tabs">
+                <p><b>Where are you staying?</b></p>
+            </div>
+
+            <div id="stays-form">
+                <form class="search-inputs-row">
+                    <div class="input-group wide">
+                        <label>Enter Destination</label>
+                        <div class="input-icon-wrapper">
+                            <img src="photos_hotel/leading-icon.png" width="30">
+                            <input list="cities" placeholder="Enter Destination" class="clean-input">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Check In</label>
+                        <input type="date" class="clean-input">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Check Out</label>
+                        <input type="date" class="clean-input">
+                    </div>
+
+                    <div class="input-group medium">
+                        <label>Rooms & Guests</label>
+                        <div class="input-icon-wrapper">
+                            <img src="photos_hotel/container.png" width="30"> 
+                            <select class="clean-input">
+                                <option>1 room, 1 guest</option>
+                                <option>1 room, 2 guests</option>
+                                <option>2 rooms, 4 guests</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="search-footer">
+                    <a href="#" class="add-promo">+ Add Promo Code</a>
+                    <button class="btn-show-flights">
+                        <img src="photos_hotel/building.png" width="16" style="filter: brightness(0);"> 
+                        Show Places
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div id="recent-search">
+            <h2>Your recent searches</h2>
+            <div class="recent-search-gallery">
+                <div class="recent-search-block">
+                    <div class="trip-card">
+                        <img src="photos_hotel/Frame 74.png" class="trip-image">
+                        <div class="trip-info">
+                            <h3>Istanbul, Turkey</h3>
+                            <p>325 places</p>
+                        </div>
+                    </div>
+
+                    <div class="trip-card">
+                        <img src="photos_hotel/Rectangle 333.png" class="trip-image">
+                        <div class="trip-info">
+                            <h3>Sydney, Australia</h3>
+                            <p>325 places</p>
+                        </div>
+                    </div>
+
+                    <div class="trip-card">
+                        <img src="photos_hotel/Rectangle 333 (1).png" class="trip-image">
+                        <div class="trip-info">
+                            <h3>Baku, Azerbaijan</h3>
+                            <p>325 places</p>
+                        </div>
+                    </div>
+
+                    <div class="trip-card">
+                        <img src="photos_hotel/Rectangle 333 (2).png" class="trip-image">
+                        <div class="trip-info">
+                            <h3>Malé, Maldives</h3>
+                            <p>325 places</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fall-into-travel-2">
+            <h2>Fall into travel</h2>
+            <div id="fall-into-travel-info">
+                <p>Going somewhere to celebrate this season?
+                    Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</p>
+                    <button id="see-all">See All</button>
+            </div>
+            <div id="sri-lanka">
+                <div id="left-shi-lanka">
+                        <h1>Backpacking</h1>
+                        <h1>Sri Lanka</h1>
+                        <p> Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life.
+                             It helps us to forget about our problems, frustrations, and fears at home. 
+                             During our journey, we experience life in different ways. 
+                             We explore new places, cultures, cuisines, traditions, and ways of living.</p>
+                        <button id="book-button-sri-lanka">Book Flight</button>
+                </div>
+                <div class="sri-lanka-gallery">
+                        <img src="photos_hotel/Rectangle 3.png" alt="">
+                        <img src="photos_hotel/Rectangle 3 (2).png" alt="">
+                        <img src="photos_hotel/Rectangle 3 (3).png" alt="">
+                        <img src="photos_hotel/Rectangle 3 (1).png" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <footer class="footer">
+        <div class="subscribe-banner">
+            <div class="subscribe-content">
+                <h2>Subscribe Newsletter</h2>
+                <p class="sub-title">The Travel</p>
+                <p class="sub-text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <img src="photos_hotel/emojione-v1_open-mailbox-with-lowered-flag.png" class="mailbox-img">
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="photos_hotel/Group111.png" alt="Golobe" class="footer-logo">
+                <div class="social-links">
+                    <a href="#"><img src="photos_hotel/akar-icons_facebook-fill.png" alt="FB"></a>
+                    <a href="#"><img src="photos_hotel/akar-icons_twitter-fill.png" alt="TW"></a>
+                    <a href="#"><img src="photos_hotel/akar-icons_youtube-fill.png" alt="YT"></a>
+                    <a href="#"><img src="photos_hotel/ant-design_instagram-filled.png" alt="IG"></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Our Destinations</h4>
+                    <a href="#">Canada</a>
+                    <a href="#">Alaksa</a>
+                    <a href="#">France</a>
+                    <a href="#">Iceland</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Activities</h4>
+                    <a href="#">Northern Lights</a>
+                    <a href="#">Cruising & sailing</a>
+                    <a href="#">Multi-activities</a>
+                    <a href="#">Kayaing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Travel Blogs</h4>
+                    <a href="#">Bali Travel Guide</a>
+                    <a href="#">Sri Lanks Travel Guide</a>
+                    <a href="#">Peru Travel Guide</a>
+                    <a href="#">Bali Travel Guide</a>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Work with us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Work with us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="hotelJS.js"></script>
+</body>
+</html>

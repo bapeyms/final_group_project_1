@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url(Montserrat.ttf);
+
+      font-family: TradeGothic;
+      src: url(TradeGothic.otf);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .nav button {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #0f2b1d;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-logo {
+      width: 110.35px;
+      height: 36px;
+    }
+
+    .airplane-nav {
+      width: 24px;
+      height: 24px;
+    }
+
+    .ion_bed.png {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="#"><img src="airplane.png" class="airplane-nav">Find Flight</a>
+      <a href="#"><img src="ion_bed.png" class="ion_bed.png">Find Stays</a>
+    </div>
+    <img src="Logo.png" class="nav-logo">
+    <div class="nav-right">
+      <a href="#">Login</a>
+      <button>Sign up</button>
+    </div>
+  </nav>
+
+</body>
+
+</html>

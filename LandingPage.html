@@ -270,6 +270,123 @@
         </div>
     </section>
 
+    <!-- Reviews section -->
+    <section class="reviews-section">
+        <div class="trip-header">
+            <div class="trip-title-group">
+                <h2 class="trip-title">Reviews</h2>
+                <p class="trip-subtitle">What people says about Golobe facilities</p>
+            </div>
+            <a href="#" class="btn-see-more">See All</a>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-text">
+                    <h3>“A real sense of community, nurtured”</h3>
+                    <p>Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for...</p>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-author">
+                    <p class="author-name">Olga</p>
+                    <p class="author-desc">Weave Studios – Kai Tak</p>
+                </div>
+                <img src="Reviews/Reviews1.jpg" class="review-img">
+            </div>
+
+            <div class="review-card">
+                <div class="review-text">
+                    <h3>“The facilities are superb. Clean, slick, bright.”</h3>
+                    <p>“A real sense of community, nurtured” Really appreciate the help and support from the staff...</p>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-author">
+                    <p class="author-name">Thomas</p>
+                    <p class="author-desc">Weave Studios – Olympic</p>
+                </div>
+                <img src="Reviews/Reviews2.jpg" class="review-img">
+            </div>
+
+            <div class="review-card">
+                <div class="review-text">
+                    <h3>“A real sense of community, nurtured”</h3>
+                    <p>Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for...</p>
+                    <a href="#" class="view-more">View more</a>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-author">
+                    <p class="author-name">Eliot</p>
+                    <p class="author-desc">Weave Studios – Kai Tak</p>
+                </div>
+                <img src="Reviews/Reviews3.jpg" class="review-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="subscribe-banner">
+            <div class="subscribe-content">
+                <h2>Subscribe Newsletter</h2>
+                <p class="sub-title">The Travel</p>
+                <p class="sub-text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <img src="Footer/mailbox.png" class="mailbox-img">
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-brand">
+                <img src="Footer/Logo2.png" alt="Golobe" class="footer-logo">
+                <div class="social-links">
+                    <a href="#"><img src="Footer/facebook.png" alt="FB"></a>
+                    <a href="#"><img src="Footer/twitter.png" alt="TW"></a>
+                    <a href="#"><img src="Footer/youtube.png" alt="YT"></a>
+                    <a href="#"><img src="Footer/instagram.png" alt="IG"></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Our Destinations</h4>
+                    <a href="#">Canada</a>
+                    <a href="#">Alaksa</a>
+                    <a href="#">France</a>
+                    <a href="#">Iceland</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Activities</h4>
+                    <a href="#">Northern Lights</a>
+                    <a href="#">Cruising & sailing</a>
+                    <a href="#">Multi-activities</a>
+                    <a href="#">Kayaing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Travel Blogs</h4>
+                    <a href="#">Bali Travel Guide</a>
+                    <a href="#">Sri Lanks Travel Guide</a>
+                    <a href="#">Peru Travel Guide</a>
+                    <a href="#">Bali Travel Guide</a>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Work with us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Work with us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
         function switchTab(tabName) 
         {
@@ -277,7 +394,6 @@
             document.getElementById('tab-stays').classList.remove('active');
             document.getElementById('flights-form').classList.add('hidden');
             document.getElementById('stays-form').classList.add('hidden');
-
             document.getElementById('tab-' + tabName).classList.add('active');
             document.getElementById(tabName + '-form').classList.remove('hidden');
         }

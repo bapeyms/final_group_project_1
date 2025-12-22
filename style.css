@@ -472,3 +472,196 @@ body
 {
     background-color: #7bc1a9;
 }
+
+/* Reviews section */
+.reviews-section
+{
+    padding: 0 50px;
+    margin-bottom: 120px;
+}
+
+.reviews-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.review-card
+{
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0px 8px 16px rgba(141, 211, 187, 0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-text h3
+{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #112211;
+}
+
+.review-text p
+{
+    font-size: 14px;
+    color: #112211;
+    opacity: 0.5;
+    line-height: 1.6;
+}
+
+.view-more
+{
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    font-size: 14px;
+    color: #112211;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.review-rating
+{
+    color: #FFC107;
+    font-size: 18px;
+    margin: 16px 0;
+}
+
+.author-name
+{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.author-desc
+{
+    font-size: 12px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.review-img
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer
+{
+    background-color: #8DD3BB;
+    padding: 0 50px 60px 50px;
+    margin-top: 160px;
+    position: relative;
+}
+
+.subscribe-banner
+{
+    background-color: #CDEAE1;
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.subscribe-content h2
+{
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.sub-title
+{
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.sub-text
+{
+    font-size: 16px;
+    opacity: 0.6;
+    margin-bottom: 16px;
+}
+
+.subscribe-form
+{
+    display: flex;
+    gap: 16px;
+}
+
+.subscribe-form input
+{
+    padding: 18px 24px;
+    border-radius: 4px;
+    border: none;
+    width: 400px;
+    font-size: 16px;
+}
+
+.subscribe-form button
+{
+    background-color: #112211;
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mailbox-img
+{
+    width: 400px;
+}
+
+.footer-main
+{
+    display: flex;
+    gap: 80px;
+    margin-top: -40px;
+}
+
+.social-links
+{
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.footer-links
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    flex-grow: 1;
+}
+
+.footer-col h4
+{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-col a
+{
+    display: block;
+    text-decoration: none;
+    color: #112211;
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 12px;
+}

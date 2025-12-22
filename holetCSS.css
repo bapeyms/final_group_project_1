@@ -11,6 +11,10 @@
   src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf) format(ttf),
        url(fonts/Montserrat-VariableFont_wght.ttf) format(ttf);
 }
+@font-face {
+  font-family: 'Ramabhadra';
+  src: url(fonts/Ramabhadra.ttf) format(ttf);
+}
 #nav {
     display: flex;
     align-items: center;
@@ -63,13 +67,40 @@
 #back-photo{
     width: 100%;
     height: 80vh;
-    background-image: url(photos_hotel/da304a6df20aa065fb20dbd850c57d4cafaeccc8.jpg);
+     background-image:
+        linear-gradient(to right, rgba(25, 38, 122, 0.6) 0%, rgba(0, 0, 0, 0) 80%),
+        url("photos_hotel/da304a6df20aa065fb20dbd850c57d4cafaeccc8.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
     margin-top: 1em;
+}
+
+#header-text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: xx-large;
+    text-decoration: none;
+    border: 1px solid red;
+    justify-content: center;
+    width: 30%;
+    margin-top: 2em;
+    margin-left: 1em;
+    
+}
+#header-text h3{
+    font-family: 'Ramabhadra', sans-serif;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px;
+}
+#header-text h4{
+    font-family: 'Ramabhadra', sans-serif;
+    font-weight: 400 !important;
+    font-size: large;
+    letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 780px){
@@ -97,5 +128,15 @@
     }
     #back-photo{
         margin-top: 4em;
+    }
+    #header-text{
+        margin: 0 auto;
+        margin-top: 2em;
+        text-align: center;
+        width: 60%;
+        font-size: x-large;
+    }
+    #header-text h4{
+    font-size: medium;
     }
 }

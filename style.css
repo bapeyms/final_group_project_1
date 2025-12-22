@@ -25,6 +25,33 @@ body
     min-height: 100vh;
 }
 
+.navbar,
+.hero-content,
+.search-section,
+.perfect-trip,
+.booking-options,
+.reviews-section,
+.subscribe-banner,
+.footer-main 
+{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer 
+{
+    width: 100%;
+    margin: 0;
+    padding: 0 0 60px 0;
+}
+
+.footer > div 
+{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 /* Header */
 .header
 {
@@ -667,4 +694,186 @@ body
     font-size: 14px;
     opacity: 0.6;
     margin-bottom: 12px;
+}
+
+img 
+{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) 
+{
+    body 
+    {
+        padding: 20px !important;
+    }
+
+    .hero-title 
+    {
+        font-size: 60px;
+    }
+
+    .search-section, .perfect-trip, .booking-options, .reviews-section 
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .trip-grid, .reviews-grid 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .booking-options 
+    {
+        height: auto;
+    }
+    .booking-card 
+    {
+        height: auto;
+        min-height: 450px;
+        padding-bottom: 40px;
+    }
+    .booking-content 
+    {
+        padding: 0 20px;
+    }
+
+    .mailbox-img 
+    {
+        display: none;
+    }
+    .subscribe-banner 
+    {
+        top: 0;
+        margin-bottom: 40px;
+        padding: 40px 30px;
+        text-align: center;
+    }
+    .subscribe-form 
+    {
+        justify-content: center;
+    }
+
+    .footer-links 
+    {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;
+    }
+    .footer-main 
+    {
+        gap: 40px;
+    }
+    .footer > div 
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .header 
+    {
+        height: auto;
+        min-height: 550px;
+        padding: 30px 20px;
+    }
+
+    .navbar 
+    {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .search-inputs-row 
+    {
+        flex-direction: column;
+    }
+
+    .booking-options 
+    {
+        flex-direction: column;
+    }
+    .booking-card 
+    {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .footer-main 
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        text-align: left;
+    }
+    .subscribe-form 
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+    .subscribe-form input, .subscribe-form button 
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) 
+{
+    body 
+    {
+        padding: 15px !important;
+    }
+    
+    .hero-title 
+    {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+
+    .search-section 
+    {
+        padding: 0 5px;
+    }
+    .search-card 
+    {
+        padding: 20px 15px;
+    }
+
+    .trip-grid, .reviews-grid, .footer-links 
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-footer 
+    {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .add-promo 
+    {
+        text-align: center;
+    }
+
+    .btn-show-flights 
+    {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .footer > div 
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

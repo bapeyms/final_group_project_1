@@ -48,6 +48,9 @@
     border: none;
     cursor: pointer;
 }
+#nav button:hover{
+    background-color: #363636;
+}
 
 .nav-logo {
     width: 110.35px;
@@ -75,7 +78,7 @@
     background-position: center;
     display: flex;
     flex-direction: column;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom: 3em;
 }
 
@@ -123,29 +126,51 @@
     display: flex;
     gap: 10px;
 }
-#fall-into-travel-info button{
+#fall-into-travel-info #see-all{
     border: 1px solid #8DD3BB;
     background-color: white;
     border-radius: 5px;
 }
-#fall-into-travel-info button:hover{
-    background-color: #c1efe0;
+#fall-into-travel-info #see-all:hover{
+    background-color: #e2e0e0;
 }
 #sri-lanka{
     display: flex;
-    
+    gap: 15px;
+    margin-bottom: 12em;
 }
 #left-shi-lanka{
     background-color: #8DD3BB;
     border-radius: 15px;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+#left-shi-lanka p{
+    margin-top: 1em;
 }
 .sri-lanka-gallery{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 15px;
 }
-
+.sri-lanka-gallery img{
+    width: 18em;
+    height: 200px;
+}
+#book-button-sri-lanka{
+    width: 98% !important;
+    padding: 8px 0;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+}
+#book-button-sri-lanka:hover{
+    background-color: #e2e0e0;
+}
 .search-section 
 {
     padding: 0 50px;
@@ -322,16 +347,247 @@
     background-color: #7bc1a9;
 }
 
+#recent-search{
+    display: flex;
+    flex-direction: column;
+    margin: -30px 5.7em 50px 5.7em;
+}
+#recent-search h2{
+    margin-bottom: 0.8em;
+}
+.recent-search-block{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2.2em;
+}
+.trip-card 
+{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+.trip-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.trip-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 4px;
+}
+.trip-info p {
+    font-size: 14px;
+    color: #112211;
+    opacity: 0.7;
+}
+
+.footer {
+    background-color: #8DD3BB;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.subscribe-banner
+{
+    background-color: #CDEAE1;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.subscribe-content h2
+{
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.sub-title
+{
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.sub-text
+{
+    font-size: 16px;
+    opacity: 0.6;
+    margin-bottom: 16px;
+}
+
+.subscribe-form
+{
+    display: flex;
+    gap: 16px;
+}
+
+.subscribe-form input
+{
+    padding: 18px 24px;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.subscribe-form button
+{
+    background-color: #112211;
+    color: white;
+    border: none;
+    padding: 18px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.subscribe-form button:hover{
+    background-color: #363636;
+}
+
+.mailbox-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    gap: 80px;
+    margin: -40px auto 0;
+}
+
+.social-links
+{
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.footer-links
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4
+{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-col a
+{
+    display: block;
+    text-decoration: none;
+    color: #112211;
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 1200px){
+    .recent-search-block{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 1024px) {
+    .search-section {
+        padding: 0 24px;
+    }
+
+    .search-inputs-row {
+        gap: 12px;
+    }
+
+    .input-group {
+        flex: 1 1 calc(50% - 12px);
+    }
+
+    .input-group[style*="flex: 2"], .input-group[style*="flex: 1.5"] {
+        flex: 1 1 100%;
+    }
+    #sri-lanka{
+        flex-direction: column;
+    }
+    .sri-lanka-gallery{
+        width: 100%;
+        height: auto;
+    }
+    .sri-lanka-gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .mailbox-img 
+    {
+        display: none;
+    }
+    .subscribe-banner 
+    {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 40px 30px;
+        text-align: center;
+    }
+    .subscribe-form input{
+        width: 100%;
+    }
+    .subscribe-form 
+    {
+        flex-direction: column;
+    }
+    .footer-links 
+    {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;
+    }
+    .footer-main 
+    {
+        gap: 40px;
+    }
+    .footer > div 
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
 @media screen and (max-width: 780px){
     #logo{
         order: 1;
         width: 100%;
         justify-content: center;
         display: flex;
-        margin-bottom: 0.5em;
     }
     #nav-left{
         order: 2;
+        margin-left: 1em;
     }
     #nav-right{
         order: 3;
@@ -341,8 +597,11 @@
     }
     #nav{
         margin: 1em 2em;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 10px;
+    }
+    #nav-left {
+        gap: 35px;
     }
     #back-photo{
         margin-top: 4em;
@@ -359,26 +618,6 @@
         margin-top: 0.2em;
         font-size: medium;
     }
-}
-@media (max-width: 1024px) {
-    .search-section {
-        padding: 0 24px;
-    }
-
-    .search-inputs-row {
-        gap: 12px;
-    }
-
-    .input-group {
-        flex: 1 1 calc(50% - 12px);
-    }
-
-    .input-group[style*="flex: 2"],
-    .input-group[style*="flex: 1.5"] {
-        flex: 1 1 100%;
-    }
-}
-@media (max-width: 768px) {
     .search-card {
         padding: 20px;
         margin-top: -60px;
@@ -407,16 +646,53 @@
         width: 100%;
         justify-content: center;
     }
+    .recent-search-block {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+    .sri-lanka-gallery{
+        display: none;
+    }
+    .footer-brand{
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+        width: 100%;
+        order: 2;
+    }
+    .footer-links{
+        order: 1;
+    }
+    .footer-main 
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links 
+    {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin: 0 auto;
+    }
+    .subscribe-form 
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+    .subscribe-form input, .subscribe-form button 
+    {
+        width: 100%;
+    }
 }
+
 @media (max-width: 480px) {
     .search-card {
         border-radius: 12px;
     }
-
     .clean-input {
         font-size: 14px;
     }
-
     .btn-show-flights {
         padding: 14px;
     }

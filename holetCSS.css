@@ -3,17 +3,16 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-.hidden-class{
-    display: hidden;
+@font-face 
+{
+    font-family: Montserrat;
+    src: url(font/Montserrat.ttf);
 }
+
+
 @font-face {
-  font-family: 'Montserrat';
-  src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf) format(ttf),
-       url(fonts/Montserrat-VariableFont_wght.ttf) format(ttf);
-}
-@font-face {
-  font-family: 'Ramabhadra';
-  src: url(fonts/Ramabhadra.ttf) format(ttf);
+    font-family: Ramabhadra;
+    src: url(font/Ramabhadra.ttf);
 }
 #nav {
     display: flex;
@@ -76,6 +75,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 1em;
+    margin-bottom: 3em;
 }
 
 #header-text{
@@ -83,24 +83,242 @@
     flex-direction: column;
     color: white;
     font-size: xx-large;
-    text-decoration: none;
-    border: 1px solid red;
     justify-content: center;
     width: 30%;
-    margin-top: 2em;
-    margin-left: 1em;
-    
+    margin-top: 3em;
+    margin-left: 3em;
 }
 #header-text h3{
     font-family: 'Ramabhadra', sans-serif;
-    font-weight: 500 !important;
     letter-spacing: 0.5px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 #header-text h4{
     font-family: 'Ramabhadra', sans-serif;
     font-weight: 400 !important;
     font-size: large;
     letter-spacing: 0.5px;
+}
+
+#fall-into-travel-2{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5.7em 0 5.7em;
+}
+#fall-into-travel-2 p{
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    flex: 6;
+}
+#fall-into-travel-2 button{
+    flex: 1;
+    width: 0.5em;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
+}
+#fall-into-travel-info{
+    display: flex;
+    gap: 10px;
+}
+#fall-into-travel-info button{
+    border: 1px solid #8DD3BB;
+    background-color: white;
+    border-radius: 5px;
+}
+#fall-into-travel-info button:hover{
+    background-color: #c1efe0;
+}
+#sri-lanka{
+    display: flex;
+    
+}
+#left-shi-lanka{
+    background-color: #8DD3BB;
+    border-radius: 15px;
+}
+.sri-lanka-gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.search-section 
+{
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 80px;
+}
+
+.search-card 
+{
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    margin-top: -100px; 
+}
+
+.search-tabs 
+{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+
+.search-tab 
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #112211;
+    padding-bottom: 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.search-tab.active 
+{
+    border-bottom: 3px solid #8DD3BB;
+    color: #112211;
+    opacity: 1;
+}
+
+.search-inputs-row 
+{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.input-group 
+{
+    border: 1px solid #79747E;
+    border-radius: 4px;
+    padding: 8px 16px;
+    flex: 1;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-group label 
+{
+    display: block;
+    font-size: 12px;
+    color: #112211;
+    margin-bottom: 4px;
+}
+
+.clean-input 
+{
+    border: none;
+    outline: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #112211;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dual-input 
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.dual-input .clean-input 
+{
+    flex: 1;
+}
+
+.input-icon-wrapper 
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hidden 
+{
+    display: none !important;
+}
+
+.separator 
+{
+    color: #112211;
+    font-weight: 500;
+    padding: 0 4px;
+    flex-shrink: 0;
+}
+
+.date-small 
+{
+    font-size: 14px;
+}
+
+.clean-number::-webkit-outer-spin-button,
+.clean-number::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.clean-number 
+{
+    width: 30px;
+    flex: none !important;
+}
+
+.search-footer 
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.add-promo 
+{
+    text-decoration: none;
+    color: #112211;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-show-flights 
+{
+    background-color: #8DD3BB;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-show-flights:hover 
+{
+    background-color: #7bc1a9;
 }
 
 @media screen and (max-width: 780px){
@@ -113,7 +331,6 @@
     }
     #nav-left{
         order: 2;
-
     }
     #nav-right{
         order: 3;
@@ -128,15 +345,78 @@
     }
     #back-photo{
         margin-top: 4em;
+        height: 50vh;
     }
     #header-text{
         margin: 0 auto;
-        margin-top: 2em;
+        margin-top: 4em;
         text-align: center;
         width: 60%;
         font-size: x-large;
     }
     #header-text h4{
-    font-size: medium;
+        margin-top: 0.2em;
+        font-size: medium;
+    }
+}
+@media (max-width: 1024px) {
+    .search-section {
+        padding: 0 24px;
+    }
+
+    .search-inputs-row {
+        gap: 12px;
+    }
+
+    .input-group {
+        flex: 1 1 calc(50% - 12px);
+    }
+
+    .input-group[style*="flex: 2"],
+    .input-group[style*="flex: 1.5"] {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 768px) {
+    .search-card {
+        padding: 20px;
+        margin-top: -60px;
+    }
+
+    .search-tabs {
+        margin-bottom: 16px;
+    }
+
+    .search-inputs-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .search-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn-show-flights {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .search-card {
+        border-radius: 12px;
+    }
+
+    .clean-input {
+        font-size: 14px;
+    }
+
+    .btn-show-flights {
+        padding: 14px;
     }
 }

@@ -422,146 +422,114 @@
     opacity: 0.7;
 }
 
-#fall-into-travel-1 {
-      font-family: sans-serif;
-      margin: 1em 5.7em;
-      margin-top: 120px;
-    }
-
-    #fall-into-travel-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 30px;
-      width: 100%;
-    }
-
-    #fall-into-travel-info h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    #fall-into-travel-1 #b-see-all {
-      border: 1px solid #8DD3BB;
-      background-color: white;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      height: fit-content;
-    }
-
-    .fall-travel-cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .travel-card {
-      position: relative;
-      height: 450px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .travel-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .travel-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
-    }
-
-    .card-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 20px;
-      color: white;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .city {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    .info {
-      font-size: 14px;
-      margin: 4px 0 0 0;
-      opacity: 0.9;
-    }
-
-    .price {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    .button-flight {
-      background-color: #8DD3BB;
-      border: none;
-      border-radius: 4px;
-      padding: 12px;
-      width: 100%;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .button-flight:hover {
-      background-color: #7cc0a9;
-    }
-
-/* FALL INTO TRAVEL BLOCK */
-#fall-into-travel-2{
+/* FALL INTO TRAVEL BLOCK 1 AND 2 */
+.fall-into-travel-info{
+    display: flex;
+    gap: 10px;
+}
+.fall-into-travel-info .see-all{
+    border: 1px solid #8DD3BB;
+    background-color: white;
+    border-radius: 3px;
+}
+.fall-into-travel-info .see-all:hover{
+    background: #8DD3BB;
+}
+#fall-into-travel-1, #fall-into-travel-2{
     display: flex;
     flex-direction: column;
     max-width: 1200px;
     margin: 10px auto 0 auto;
     padding: 0 20px;
 }
-#fall-into-travel-2 p{
+#fall-into-travel-1 p, #fall-into-travel-2 p{
     margin-top: 0.2em;
     margin-bottom: 1em;
     flex: 6;
 }
-#fall-into-travel-2 button{
+#fall-into-travel-1 .see-all, #fall-into-travel-2 .see-all{
     flex: 1;
     width: 0.5em;
     height: 2em;
     justify-content: center;
     align-items: center;
 }
-#fall-into-travel-info{
+
+/*FALL INTO TRAVEL BLOCK 1 CARDS*/
+.fall-travel-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 2em;
+}
+.travel-card {
+    min-width: 185px;
+    position: relative;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.travel-card img {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+.travel-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+}
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    z-index: 1;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
 }
-#fall-into-travel-info #see-all{
-    border: 1px solid #8DD3BB;
-    background-color: white;
-    border-radius: 3px;
+.text-left{
+    display: flex;
+    flex-direction: column;
 }
-#fall-into-travel-info #see-all:hover{
-    background: #8DD3BB;
+.top-row{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    border: 1px solid red;
+    margin-bottom: 0.6em;
+}
+.city{
+    font-size: larger;
+    margin-bottom: 0.1em;
+}
+.info{
+    font-size: small;
+    opacity: 0.8;
+}
+.price{
+    font-weight: bolder;
+    font-size: large;
+}
+.button-flight{
+    background-color: #8DD3BB;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button-flight:hover{
+    background-color: #7cc0a9;
 }
 
 /* SRI LANKA BLOCK */

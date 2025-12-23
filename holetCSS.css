@@ -132,10 +132,10 @@
 #fall-into-travel-info #see-all{
     border: 1px solid #8DD3BB;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 #fall-into-travel-info #see-all:hover{
-    background-color: #e2e0e0;
+    background: #8DD3BB;
 }
 #sri-lanka{
     display: flex;

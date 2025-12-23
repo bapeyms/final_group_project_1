@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .hidden-class {
+      display: hidden;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      src: url(fonts/Montserrat-Italic-VariableFont_wght.ttf) format(ttf),
+        url(fonts/Montserrat-VariableFont_wght.ttf) format(ttf);
+    }
+
+    #nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1em 4em;
+      height: 60px;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    #nav-left,
+    #nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #nav a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #000;
+      height: 60px;
+    }
+
+    #nav button {
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #0f2b1d;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-logo {
+      width: 110.35px;
+      height: 36px;
+    }
+
+    .nav-settings {
+      width: 24px;
+      height: 24px;
+    }
+
+    #flight {
+      height: 100%;
+      border-bottom: 4px solid #8DD3BB;
+    }
+
+    @media screen and (max-width: 1024px) {
+      #nav {
+        margin: 1em 2em;
+      }
+    }
+
+    @media screen and (max-width: 780px) {
+      #nav {
+        height: auto;
+        padding: 10px 0;
+        justify-content: space-between;
+      }
+
+      #logo {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+      }
+
+      #nav-left {
+        order: 2;
+        gap: 15px;
+      }
+
+      #nav-right {
+        order: 3;
+        gap: 10px;
+      }
+
+      .nav-p {
+        display: none;
+      }
+
+      #nav a {
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      #nav {
+        margin: 1em;
+      }
+
+      #nav-left,
+      #nav-right {
+        gap: 8px;
+      }
+
+      #nav button {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+
+      #nav-right a {
+        font-size: 14px;
+      }
+    }
+
+    .sec-slide {
+      width: 100%;
+      background: linear-gradient(to right, rgba(25, 38, 122, 0.6) 0%, rgba(0, 0, 0, 0) 80%), url(pics/image.jpg);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 180px;
+    }
+
+
+    .sec-slide-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      position: absolute;
+      top: 10em;
+      margin-left: 5em;
+      color: #fff;
+      font-family: 'TradeGothic', sans-serif;
+      font-weight: 200;
+      font-size: 20px;
+    }
+
+    .sec-slide-text {
+      font-family: 'TradeGothic', sans-serif;
+      font-weight: 600;
+      font-size: 45px;
+    }
+
+    .places_map {
+      display: flex;
+      flex-direction: column;
+      padding: 0 5.7em;
+    }
+
+    .text_map {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .places_map h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    .text_map p {
+      margin: 0;
+      max-width: 600px;
+      color: #112211;
+      opacity: 0.7;
+    }
+
+    #btn-see-all {
+      border: 1px solid #8DD3BB;
+      background-color: white;
+      border-radius: 4px;
+      padding: 10px 24px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+      white-space: nowrap;
+      height: fit-content;
+    }
+
+    #btn-see-all:hover {
+      background-color: #f5f5f5;
+    }
+
+    #img_map {
+      margin-top: 1em;
+      width: 100%
+    }
+
+    .order {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1235px, 90%);
+      border-radius: 15px;
+      padding: 30px;
+      bottom: -10em;
+      z-index: 20;
+    }
+
+    .order-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 1.5em;
+      color: #000;
+      margin: 0.3em 0 1em 0;
+    }
+
+    .search-section {
+      padding: 0 50px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-tabs {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #E0E0E0;
+      padding-bottom: 10px;
+    }
+
+    .search-tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #112211;
+      padding-bottom: 10px;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+
+    .search-tab.active {
+      border-bottom: 3px solid #8DD3BB;
+      color: #112211;
+      opacity: 1;
+    }
+
+    .search-inputs-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .input-group {
+      border: 1px solid #79747E;
+      border-radius: 4px;
+      padding: 8px 16px;
+      flex: 1;
+      position: relative;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 12px;
+      color: #112211;
+      margin-bottom: 4px;
+    }
+
+    .clean-input {
+      border: none;
+      outline: none;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #112211;
+      width: 100%;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .dual-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .dual-input .clean-input {
+      flex: 1;
+    }
+
+    .input-icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .separator {
+      color: #112211;
+      font-weight: 500;
+      padding: 0 4px;
+      flex-shrink: 0;
+    }
+
+    .date-small {
+      font-size: 14px;
+    }
+
+    .clean-number::-webkit-outer-spin-button,
+    .clean-number::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .clean-number {
+      width: 30px;
+      flex: none !important;
+    }
+
+    .search-footer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .add-promo {
+      text-decoration: none;
+      color: #112211;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn-show-flights {
+      background-color: #8DD3BB;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .btn-show-flights:hover {
+      background-color: #7bc1a9;
+    }
+
+    @media (max-width: 1024px) {
+      .search-inputs-row {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .input-group {
+        flex: 1 1 calc(50% - 12px);
+      }
+
+      .order {
+        width: 90%;
+        padding: 20px;
+        bottom: -100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sec-slide {
+        height: auto;
+        min-height: 450px;
+        display: block;
+        margin-bottom: 50px;
+      }
+
+      .sec-slide-content {
+        position: relative;
+        top: 0;
+        margin-left: 20px;
+        padding: 40px 0 20px 0;
+      }
+
+      .sec-slide-text {
+        font-size: 30px;
+      }
+
+      .order {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%;
+        bottom: auto;
+        margin-top: -40px;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+
+      .search-section {
+        padding: 0;
+        margin-bottom: 30px;
+      }
+
+      .search-card {
+        padding: 20px;
+      }
+
+      .input-group {
+        flex: 1 1 100%;
+      }
+
+      .search-footer {
+        flex-direction: column-reverse;
+        gap: 16px;
+        align-items: stretch;
+      }
+
+      .btn-show-flights {
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .add-promo {
+        text-align: center;
+      }
+
+      .dual-input {
+        flex-wrap: wrap;
+      }
+    }
+
+    input[type="date"].clean-input {
+      min-height: 24px;
+    }
+
+    .footer {
+      background-color: #8DD3BB;
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-top: 150px;
+      padding-bottom: 30px;
+    }
+
+    .subscribe-banner {
+      background-color: #CDEAE1;
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      top: -100px;
+      padding: 15px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .subscribe-content {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .subscribe-content h2 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .sub-title {
+      font-size: 20px;
+      font-weight: 700;
+      opacity: 0.8;
+    }
+
+    .sub-text {
+      font-size: 16px;
+      opacity: 0.6;
+      margin-bottom: 16px;
+    }
+
+    .subscribe-form {
+      display: flex !important;
+      gap: 16px;
+      margin-top: 24px;
+      width: 100%;
+    }
+
+    .subscribe-form input {
+      background-color: #ffffff;
+      border: 1px solid transparent;
+      outline: none;
+      border-radius: 8px;
+      padding: 18px 24px;
+      flex: 1;
+      font-size: 16px;
+      color: #112211;
+    }
+
+    .subscribe-form button {
+      background-color: #112211;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 18px 32px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: 0.3s;
+      flex-shrink: 0;
+    }
+
+    .subscribe-form button:hover {
+      background-color: #2a3d2a;
+    }
+
+    .mailbox-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: center;
+      width: 95%;
+      gap: 80px;
+      margin: -40px auto 0;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .footer-col a {
+      display: block;
+      text-decoration: none;
+      color: #112211;
+      font-size: 14px;
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .mailbox-img {
+        display: none;
+      }
+
+      .subscribe-banner {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .subscribe-form input {
+        width: 100%;
+      }
+
+      .subscribe-form {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .footer-main {
+        gap: 40px;
+      }
+
+      .footer>div {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    @media screen and (max-width: 780px) {
+      .footer-brand {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        order: 2;
+      }
+
+      .footer-links {
+        order: 1;
+      }
+
+      .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .subscribe-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .subscribe-form input,
+      .subscribe-form button {
+        width: 100%;
+      }
+    }
+
+    #fall-into-travel-2 {
+      display: flex;
+      flex-direction: column;
+      margin: 40px 5.7em;
+    }
+
+    #fall-into-travel-2 #fall-into-travel-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    #fall-into-travel-2 p {
+      margin: 0;
+      color: #112211;
+      opacity: 0.7;
+      line-height: 1.5;
+    }
+
+    #sri-lanka {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    #left-shi-lanka {
+      background-color: #8DD3BB;
+      border-radius: 15px;
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #left-shi-lanka h1 {
+      font-size: 40px;
+      margin: 0;
+      color: #112211;
+    }
+
+    .sri-lanka-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      flex: 1;
+    }
+
+    .sri-lanka-gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    #book-button-sri-lanka {
+      width: 100%;
+      padding: 12px 0;
+      background-color: #fff;
+      border-radius: 4px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      #fall-into-travel-2 {
+        margin: 40px 2em;
+      }
+
+      #sri-lanka {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #fall-into-travel-2 #fall-into-travel-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      #fall-into-travel-2 #see-all {
+        width: 100% !important;
+        text-align: center;
+        padding: 12px 0;
+        box-sizing: border-box;
+      }
+
+      .sri-lanka-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #fall-into-travel-1 {
+      font-family: sans-serif;
+      margin: 1em 5.7em;
+      margin-top: 120px;
+    }
+
+    #fall-into-travel-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    #fall-into-travel-info h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    #fall-into-travel-1 #b-see-all {
+      border: 1px solid #8DD3BB;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      height: fit-content;
+    }
+
+    .fall-travel-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .travel-card {
+      position: relative;
+      height: 450px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .travel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .travel-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      color: white;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .city {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .info {
+      font-size: 14px;
+      margin: 4px 0 0 0;
+      opacity: 0.9;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .button-flight {
+      background-color: #8DD3BB;
+      border: none;
+      border-radius: 4px;
+      padding: 12px;
+      width: 100%;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .button-flight:hover {
+      background-color: #7cc0a9;
+    }
+
+    @media (max-width: 1200px) {
+      #fall-into-travel-1 {
+        margin: 120px 2em 0 2em;
+      }
+
+      .fall-travel-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #fall-into-travel-1 {
+        margin: 60px 1em 0 1em;
+      }
+
+      #fall-into-travel-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      #fall-into-travel-info h2 {
+        font-size: 24px;
+      }
+
+      #fall-into-travel-info p {
+        font-size: 14px;
+      }
+
+      #b-see-all {
+        width: 100%;
+        text-align: center;
+      }
+
+      .fall-travel-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .travel-card {
+        height: 350px;
+      }
+    }
+
+    #b-see-all,
+    #btn-see-all,
+    #see-all {
+      border: 1px solid #8DD3BB;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      height: fit-content;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      transition: background-color 0.2s;
+      white-space: nowrap;
+    }
+
+    #b-see-all:hover,
+    #btn-see-all:hover,
+    #see-all:hover {
+      background-color: #e2e0e0;
+    }
+
+    @media (max-width: 768px) {
+
+      #fall-into-travel-info,
+      .text_map {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-left: 0 !important;
+        padding: 0 15px;
+      }
+
+      #b-see-all,
+      #btn-see-all,
+      #see-all {
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 0 !important;
+        margin-top: 10px;
+        padding: 12px 0;
+      }
+
+      .text_map {
+        display: flex;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="nav">
+    <div id="nav-left">
+      <div id="flight">
+        <a href="#">
+          <img src="pics/airplane.png" class="nav-settings">
+          <p class="nav-p">Find Flight</p>
+        </a>
+      </div>
+      <div id="stays">
+        <a href="#">
+          <img src="pics/ion_bed.png" class="nav-settings">
+          <p class="nav-p">Find Stays</p>
+        </a>
+      </div>
+    </div>
+
+    <div id="logo">
+      <img src="pics/Logo.png" class="nav-logo">
+    </div>
+    <div id="nav-right">
+      <a href="#">Login</a>
+      <button>Sign up</button>
+    </div>
+  </nav>
+
+  <div class="sec-slide">
+    <div class="sec-slide-content">
+      <div class="sec-slide-text">
+        <p>Make your travel</p>
+        <p>wishlist, we’ll do</p>
+        <p>the rest</p>
+      </div>
+      <p>Special offers to suit your plan</p>
+    </div>
+    <div class="order">
+      <div class="search-section">
+        <div class="search-card">
+          <p class="order-text">Where are you flying?</p>
+          <div id="flights-form">
+            <form class="search-inputs-row">
+              <div class="input-group">
+                <label>From - To</label>
+                <div class="dual-input">
+                  <input list="cities" placeholder="From" class="clean-input">
+                  <span class="separator">-</span>
+                  <input list="cities" placeholder="To" class="clean-input">
+                </div>
+                <datalist id="cities">
+                  <option value="Istanbul">
+                  <option value="Sydney">
+                  <option value="Baku">
+                  <option value="Malé">
+                  <option value="Paris">
+                  <option value="New York">
+                  <option value="London">
+                  <option value="Tokyo">
+                  <option value="Dubai">
+                </datalist>
+              </div>
+
+              <div class="input-group">
+                <label>Trip</label>
+                <select class="clean-input">
+                  <option value="return">Return</option>
+                  <option value="oneway">One-way</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label>Depart - Return</label>
+                <div class="dual-input">
+                  <input type="date" class="clean-input date-small">
+                  <span class="separator">-</span>
+                  <input type="date" class="clean-input date-small">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label>Passenger - Class</label>
+                <div class="dual-input">
+                  <input type="number" min="1" value="1" class="clean-input clean-number">
+                  <span class="separator">,</span>
+                  <select class="clean-input">
+                    <option>Economy</option>
+                    <option>Business</option>
+                    <option>First Class</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+            <div class="search-footer">
+              <a href="#" class="add-promo">+ Add Promo Code</a>
+              <button class="btn-show-flights">
+                <img src="pics/airplane.png" width="16" style="filter: brightness(0);">
+                Show Flights
+              </button>
+            </div>
+          </div>
+
+          <div id="stays-form" class="hidden">
+            <form class="search-inputs-row">
+              <div class="input-group" style="flex: 2;">
+                <label>Enter Destination</label>
+                <div class="input-icon-wrapper">
+                  <img src="pics/ion_bed.png" width="16">
+                  <input list="cities" placeholder="Enter Destination" class="clean-input">
+                </div>
+              </div>
+              <div class="input-group">
+                <label>Check In</label>
+                <input type="date" class="clean-input">
+              </div>
+              <div class="input-group">
+                <label>Check Out</label>
+                <input type="date" class="clean-input">
+              </div>
+              <div class="search-footer">
+                <a href="#" class="add-promo">+ Add Promo Code</a>
+                <button class="btn-show-flights">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="fall-into-travel-1">
+    <div id="fall-into-travel-info">
+      <div>
+        <h2>Fall into travel</h2>
+        <p>Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the
+          travel tools to get you to your destination.</p>
+      </div>
+      <button id="b-see-all">See All</button>
+    </div>
+
+    <div class="fall-travel-cards">
+      <div class="travel-card">
+        <img src="pics/travel1.jpg" alt="Melbourne">
+        <div class="card-content">
+          <div class="top-row">
+            <div class="text-left">
+              <p class="city">Melbourne</p>
+              <p class="info">An amazing journey</p>
+            </div>
+            <p class="price">$ 700</p>
+          </div>
+          <button class="button-flight">Book Flight</button>
+        </div>
+      </div>
+
+      <div class="travel-card">
+        <img src="pics/travel2.jpg" alt="Paris">
+        <div class="card-content">
+          <div class="top-row">
+            <div class="text-left">
+              <p class="city">Paris</p>
+              <p class="info">A Paris Adventure</p>
+            </div>
+            <p class="price">$ 600</p>
+          </div>
+          <button class="button-flight">Book Flight</button>
+        </div>
+      </div>
+
+      <div class="travel-card">
+        <img src="pics/travel3.jpg" alt="London">
+        <div class="card-content">
+          <div class="top-row">
+            <div class="text-left">
+              <p class="city">London</p>
+              <p class="info">London eye adventure</p>
+            </div>
+            <p class="price">$ 350</p>
+          </div>
+          <button class="button-flight">Book Flight</button>
+        </div>
+      </div>
+
+      <div class="travel-card">
+        <img src="pics/travel4.jpg" alt="Columbia">
+        <div class="card-content">
+          <div class="top-row">
+            <div class="text-left">
+              <p class="city">Columbia</p>
+              <p class="info">Amazing streets</p>
+            </div>
+            <p class="price">$ 700</p>
+          </div>
+          <button class="button-flight">Book Flight</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="places_map">
+    <div class="text_map">
+      <h2>Let's go places together</h2>
+      <p>Discover the latest offers and news and start planning your next trip with us.
+      </p>
+      <button id="btn-see-all">See all</button>
+    </div>
+  </div>
+  <img src="pics/Frame 2608705.png" id="img_map">
+
+  <div id="fall-into-travel-2">
+    <h2>Fall into travel</h2>
+    <div id="fall-into-travel-info">
+      <p>Going somewhere to celebrate this season?
+        Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</p>
+      <button id="see-all">See All</button>
+    </div>
+    <div id="sri-lanka">
+      <div id="left-shi-lanka">
+        <h1>Backpacking</h1>
+        <h1>Sri Lanka</h1>
+        <p> Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life.
+          It helps us to forget about our problems, frustrations, and fears at home.
+          During our journey, we experience life in different ways.
+          We explore new places, cultures, cuisines, traditions, and ways of living.</p>
+        <button id="book-button-sri-lanka">Book Flight</button>
+      </div>
+      <div class="sri-lanka-gallery">
+        <img src="pics/Rectangle 3 (2).png" alt="">
+        <img src="pics/Rectangle 3.png" alt="">
+        <img src="pics/Rectangle 3 (1).png" alt="">
+        <img src="pics/Rectangle 3.0png.png" alt="">
+      </div>
+    </div>
+
+  </div>
+  <footer class="footer">
+
+    <div class="subscribe-banner">
+      <div class="subscribe-content">
+        <h2>Subscribe Newsletter</h2>
+        <p class="sub-title">The Travel</p>
+        <p class="sub-text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+        <div class="subscribe-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+      <img src="pics/emojione-v1_open-mailbox-with-lowered-flag.png" class="mailbox-img">
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="pics/Group.png" alt="Golobe" class="footer-logo">
+        <div class="social-links">
+          <a href="#"><img src="pics/akar-icons_facebook-fill.png" alt="FB"></a>
+          <a href="#"><img src="pics/akar-icons_twitter-fill.png" alt="TW"></a>
+          <a href="#"><img src="pics/akar-icons_youtube-fill.png" alt="YT"></a>
+          <a href="#"><img src="pics/ant-design_instagram-filled.png" alt="IG"></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Our Destinations</h4>
+          <a href="#">Canada</a>
+          <a href="#">Alaksa</a>
+          <a href="#">France</a>
+          <a href="#">Iceland</a>
+        </div>
+        <div class="footer-col">
+          <h4>Our Activities</h4>
+          <a href="#">Northern Lights</a>
+          <a href="#">Cruising & sailing</a>
+          <a href="#">Multi-activities</a>
+          <a href="#">Kayaing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Travel Blogs</h4>
+          <a href="#">Bali Travel Guide</a>
+          <a href="#">Sri Lanks Travel Guide</a>
+          <a href="#">Peru Travel Guide</a>
+          <a href="#">Bali Travel Guide</a>
+        </div>
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <a href="#">Our Story</a>
+          <a href="#">Work with us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="flight_flow.js"></script>
+</body>
+
+</html>

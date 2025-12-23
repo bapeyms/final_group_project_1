@@ -3,20 +3,17 @@
     font-family: Montserrat;
     src: url(LandingPageFonts/Montserrat.ttf);
 }
-
 @font-face 
 {
     font-family: Ramabhadra;
     src: url(LandingPageFonts/Ramabhadra.ttf);
 }
-
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body
 {
     padding: 30px;
@@ -25,6 +22,8 @@ body
     min-height: 100vh;
 }
 
+
+/* Width Restriction */
 .navbar,
 .hero-content,
 .search-section,
@@ -38,19 +37,18 @@ body
     margin-left: auto;
     margin-right: auto;
 }
-
 .footer 
 {
     width: 100%;
     margin: 0;
     padding: 0 0 60px 0;
 }
-
 .footer > div 
 {
     padding-left: 50px;
     padding-right: 50px;
 }
+
 
 /* Header */
 .header
@@ -69,7 +67,6 @@ body
     padding: 32px 50px;
     position: relative;
 }
-
 #nav 
 {
     display: flex;
@@ -83,14 +80,12 @@ body
     margin: 0 auto;
     padding: 0 20px;
 }
-
 #nav-left, #nav-right 
 {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 #nav a 
 {
     display: flex;
@@ -139,31 +134,53 @@ body
 {
     text-decoration: underline;
 }
-
 .nav-logo 
 {
     width: 110.35px;
     height: 36px;
 }
-
-
 .nav-settings 
 {
     width: 24px;
     height: 24px;
 }
+.hero-content
+{
+    text-align: center;
+    margin-top: 60px;
+}
+.hero-subtitle
+{
+    font-family: Montserrat, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+.hero-title
+{
+    font-family: Ramabhadra, sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+.hero-description
+{
+    font-size: 20px;
+    font-weight: 500;
+}
 
+
+/* Dropdown */
 .dropdown 
 { 
     display: none; 
     position: relative;
 }
-
 .desktop-btn 
 { 
     display: inline-block; 
 }
-
 .dropbtn 
 {
     background-color: rgba(255, 255, 255, 0);
@@ -172,12 +189,10 @@ body
     border-radius: 5px;
     cursor: pointer;
 }
-
 #user-icon
 {
     filter: invert(100%);
 }
-
 .dropdown-content 
 {
     display: none;
@@ -190,7 +205,6 @@ body
     left: 50%;
     transform: translateX(-50%);
 }
-
 .dropdown-content .tab 
 {
     display: block;
@@ -201,13 +215,15 @@ body
     width: 100%;
     cursor: pointer;
 }
-
 .dropdown:hover .dropdown-content 
 {
     display: flex;
 }
 
-.auth-modal {
+
+/* Modal Window*/
+.auth-modal
+{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
@@ -216,12 +232,12 @@ body
   align-items: center;
   z-index: 1000;
 }
-
-.auth-modal.active {
+.auth-modal.active
+{
   display: flex;
 }
-
-.auth-box {
+.auth-box 
+{
   background: #fff;
   width: 25em;
   height: 400px;
@@ -229,22 +245,22 @@ body
   border-radius: 16px;
   position: relative;
 }
-
-.close {
+.close 
+{
   position: absolute;
   top: 12px;
   right: 16px;
   font-size: 24px;
   cursor: pointer;
 }
-
-.auth-tabs {
+.auth-tabs 
+{
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
-
-.auth-tab {
+.auth-tab 
+{
   flex: 1;
   padding: 10px;
   margin-top: 20px;
@@ -253,32 +269,33 @@ body
   cursor: pointer;
   background: #eee;
 }
-
-.auth-tab.active {
+.auth-tab.active 
+{
   background: #112211;
   color: white;
 }
-
-.auth-form {
+.auth-form
+{
   display: none;
 }
-
-.auth-form.active {
+.auth-form.active 
+{
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.auth-tab.active:hover{
+.auth-tab.active:hover
+{
     background: #8fd3b6;
 }
-
-.auth-form input {
+.auth-form input 
+{
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
-
-.auth-form button {
+.auth-form button 
+{
   background: #8fd3b6;
   border: none;
   padding: 12px;
@@ -287,38 +304,11 @@ body
   cursor: pointer;
   color: white;
 }
-.auth-form button:hover{
+.auth-form button:hover
+{
     background: #73a991;
 }
 
-.hero-content
-{
-    text-align: center;
-    margin-top: 60px;
-}
-
-.hero-subtitle
-{
-    font-family: Montserrat, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-}
-
-.hero-title
-{
-    font-family: Ramabhadra, sans-serif;
-    font-size: 80px;
-    font-weight: 900;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    line-height: 1.4;
-}
-
-.hero-description
-{
-    font-size: 20px;
-    font-weight: 500;
-}
 
 /* Search card */
 .search-section 
@@ -368,7 +358,6 @@ body
     gap: 16px;
     margin-bottom: 32px;
 }
-
 .input-group 
 {
     border: 1px solid #79747E;
@@ -389,7 +378,6 @@ body
     margin-bottom: 4px;
     white-space: nowrap;
 }
-
 .clean-input 
 {
     border: none;
@@ -403,7 +391,6 @@ body
     padding: 0;
     cursor: pointer;
 }
-
 .dual-input 
 {
     display: flex;
@@ -424,14 +411,12 @@ body
     flex: 1;
     min-width: 110px;
 }
-
 .clean-input:disabled 
 {
     cursor: not-allowed;
     color: #999;
     background-color: transparent;
 }
-
 .separator 
 {
     color: #112211;
@@ -446,20 +431,17 @@ body
 {
     background-color: #f0f0f0;
 }
-
 .clean-number 
 {
     width: 40px !important;
     flex: none !important;
 }
-
 .dual-input select 
 {
     flex: 1;
     cursor: pointer;
     min-width: 80px;
 }
-
 .input-icon-wrapper 
 {
     display: flex;
@@ -467,7 +449,6 @@ body
     gap: 12px;
     width: 100%;
 }
-
 .input-icon-wrapper img 
 {
     width: 20px;
@@ -475,14 +456,12 @@ body
     opacity: 0.7;
     flex-shrink: 0;
 }
-
 .input-icon-wrapper .clean-input,
 .input-icon-wrapper select 
 {
     flex: 1;
     width: 100%;
 }
-
 #stays-form input[type="date"] 
 {
     min-width: 110px; 
@@ -491,12 +470,10 @@ body
     color: #112211;
     font-weight: 500;
 }
-
 #stays-form .input-group 
 {
     justify-content: center;
 }
-
 .search-footer 
 {
     display: flex;
@@ -504,7 +481,6 @@ body
     align-items: center;
     gap: 24px;
 }
-
 .add-promo 
 {
     text-decoration: none;
@@ -512,7 +488,6 @@ body
     font-size: 14px;
     font-weight: 500;
 }
-
 .btn-show-flights 
 {
     background-color: #8DD3BB;
@@ -527,16 +502,15 @@ body
     gap: 4px;
     transition: background-color 0.2s;
 }
-
 .btn-show-flights:hover 
 {
     background-color: #7bc1a9;
 }
-
 .hidden 
 {
     display: none !important;
 }
+
 
 /* Plan your perfect trip */
 .perfect-trip 
@@ -544,7 +518,6 @@ body
     padding: 0 50px;
     margin-bottom: 80px;
 }
-
 .trip-header 
 {
     display: flex;
@@ -552,7 +525,6 @@ body
     align-items: flex-end;
     margin-bottom: 32px;
 }
-
 .trip-title 
 {
     font-size: 32px;
@@ -560,14 +532,12 @@ body
     color: #000;
     margin-bottom: 8px;
 }
-
 .trip-subtitle 
 {
     color: #112211;
     opacity: 0.6;
     font-size: 16px;
 }
-
 .btn-see-more 
 {
     text-decoration: none;
@@ -579,19 +549,16 @@ body
     font-weight: 500;
     transition: 0.3s;
 }
-
 .btn-see-more:hover 
 {
     background: #8DD3BB;
 }
-
 .trip-grid 
 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
-
 .trip-card 
 {
     display: flex;
@@ -604,12 +571,10 @@ body
     cursor: pointer;
     transition: transform 0.2s;
 }
-
 .trip-card:hover 
 {
     transform: translateY(-5px);
 }
-
 .trip-image 
 {
     width: 90px;
@@ -617,7 +582,6 @@ body
     border-radius: 8px;
     object-fit: cover;
 }
-
 .trip-info h3 
 {
     font-size: 16px;
@@ -626,12 +590,12 @@ body
     margin-bottom: 4px;
     opacity: 0.7;
 }
-
 .trip-info p 
 {
     font-size: 14px;
     color: #112211;
 }
+
 
 /* Booking options */
 .booking-options 
@@ -641,7 +605,6 @@ body
     gap: 24px;
     margin-bottom: 80px;
 }
-
 .booking-card 
 {
     flex: 1;
@@ -655,7 +618,6 @@ body
     justify-content: center;
     padding-bottom: 32px;
 }
-
 .booking-card::before 
 {
     content: "";
@@ -667,7 +629,6 @@ body
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
     border-radius: 20px;
 }
-
 .booking-content 
 {
     position: relative;
@@ -676,21 +637,18 @@ body
     color: white;
     padding: 0 40px;
 }
-
 .booking-title 
 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 8px;
 }
-
 .booking-text 
 {
     font-size: 16px;
     margin-bottom: 24px;
     line-height: 1.5;
 }
-
 .btn-booking 
 {
     display: inline-flex;
@@ -705,11 +663,11 @@ body
     font-size: 14px;
     transition: background-color 0.3s;
 }
-
 .btn-booking:hover 
 {
     background-color: #7bc1a9;
 }
+
 
 /* Reviews section */
 .reviews-section
@@ -717,14 +675,12 @@ body
     padding: 0 50px;
     margin-bottom: 12em;
 }
-
 .reviews-grid
 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
-
 .review-card
 {
     background: white;
@@ -735,7 +691,6 @@ body
     display: flex;
     flex-direction: column;
 }
-
 .review-text h3
 {
     font-size: 20px;
@@ -743,7 +698,6 @@ body
     margin-bottom: 16px;
     color: #112211;
 }
-
 .review-text p
 {
     font-size: 14px;
@@ -751,7 +705,6 @@ body
     opacity: 0.5;
     line-height: 1.6;
 }
-
 .view-more
 {
     display: block;
@@ -762,27 +715,23 @@ body
     text-decoration: none;
     margin-top: 12px;
 }
-
 .review-rating
 {
     color: #FFC107;
     font-size: 18px;
     margin: 16px 0;
 }
-
 .author-name
 {
     font-weight: 700;
     font-size: 14px;
 }
-
 .author-desc
 {
     font-size: 12px;
     opacity: 0.5;
     margin-bottom: 20px;
 }
-
 .review-img
 {
     width: 100%;
@@ -790,6 +739,7 @@ body
     border-radius: 12px;
     object-fit: cover;
 }
+
 
 /* Footer */
 .footer 
@@ -803,7 +753,6 @@ body
     margin-bottom: -30px;
     width: calc(100% + 60px);
 }
-
 .subscribe-banner
 {
     background-color: #CDEAE1;
@@ -819,34 +768,29 @@ body
     top: -100px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
 }
-
 .subscribe-content h2
 {
     font-size: 44px;
     font-weight: 700;
     margin-bottom: 24px;
 }
-
 .sub-title
 {
     font-size: 20px;
     font-weight: 700;
     opacity: 0.8;
 }
-
 .sub-text
 {
     font-size: 16px;
     opacity: 0.6;
     margin-bottom: 16px;
 }
-
 .subscribe-form
 {
     display: flex;
     gap: 16px;
 }
-
 .subscribe-form input
 {
     padding: 18px 24px;
@@ -855,7 +799,6 @@ body
     width: 100%;
     font-size: 16px;
 }
-
 .subscribe-form button
 {
     background-color: #112211;
@@ -866,18 +809,15 @@ body
     font-weight: 600;
     cursor: pointer;
 }
-
 .subscribe-form button:hover
 {
     background-color: #363636;
 }
-
 .mailbox-img 
 {
     max-width: 100%;
     height: auto;
 }
-
 .footer-main 
 {
     display: flex;
@@ -886,28 +826,24 @@ body
     gap: 80px;
     margin: -40px auto 0;
 }
-
 .social-links
 {
     display: flex;
     gap: 12px;
     margin-top: 24px;
 }
-
 .footer-links
 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 40px;
 }
-
 .footer-col h4
 {
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 16px;
 }
-
 .footer-col a
 {
     display: block;
@@ -917,12 +853,12 @@ body
     opacity: 0.6;
     margin-bottom: 12px;
 }
-
 img 
 {
     max-width: 100%;
     height: auto;
 }
+
 
 @media (max-width: 1024px) 
 {
@@ -967,7 +903,6 @@ img
     {
         display: none;
     }
-
     .subscribe-banner 
     {
         display: flex;

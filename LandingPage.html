@@ -10,28 +10,39 @@
 
     <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-group">
-                <a href="#" class="nav-link">
-                    <img src="Header/airplane.png" class="nav-icon">
-                    Find Flight
+        <nav id="nav">
+            <div id="nav-left">
+                <a href="#">
+                    <img src="Header/airplane.png" class="nav-settings">
+                    <p class="nav-p">Find Flight</p>
                 </a>
-                <a href="hotel.html" class="nav-link">
-                    <img src="Header/bed.png" class="nav-icon">
-                    Find Stays
-                </a>
-            </div>
-      
-            <div class="nav-logo">
-                <a href="LandingPage.html">
-                    <img src="Header/Logo1.png" class="nav-logo">
-                </a>
-            </div>
-      
-            <div class="nav-group">
-                <a href="#" class="nav-login">Login</a>
-                <a href="#" class="btn-signup">Sign up</a>
-            </div>
+                    <div id="stays">
+                        <a href="hotel.html">
+                            <img src="Header/bed.png" class="nav-settings">
+                            <p class="nav-p">Find Stays</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="logo">
+                    <a href="LandingPage.html">
+                        <img src="Header/Logo1.png" class="nav-logo">
+                    </a>
+                </div>
+                
+                <div id="nav-right">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <img src="photos_hotel/account-25.png" class="nav-settings" id="user-icon">
+                        </button>
+                        <div class="dropdown-content">
+                            <button class="tab active" data-tab="login" id="login-btn">Login</button>
+                            <button class="tab" data-tab="signup" id="sign-up-btn">Sign up</button>
+                        </div>
+                    </div>
+                    <button class="tab active desktop-btn" data-tab="login" id="login-btn">Login</button>
+                    <button class="tab desktop-btn" data-tab="signup" id="sign-up-btn">Sign up</button>
+                </div>
         </nav>
       
         <div class="hero-content">

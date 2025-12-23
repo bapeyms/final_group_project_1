@@ -43,6 +43,31 @@
                 </div>
         </nav>
 
+        <div class="auth-modal" id="authModal">
+            <div class="auth-box">
+                <span class="close" id="closeModal">&times;</span>
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-form="login">Login</button>
+                    <button class="auth-tab" data-form="signup">Sign up</button>
+                </div>
+                
+                <form class="auth-form active" id="login">
+                    <h2>Login</h2>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}">
+                    <button type="submit">Login</button>
+                </form>
+                
+                <form class="auth-form" id="signup">
+                    <h2>Sign up</h2>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}">
+                    <button type="submit">Create account</button>
+                </form>
+            </div>
+        </div>
+
         <div id="back-photo">
             <div id="header-text">
                 <h3>Make your travel wishlist, we'll do the rest</h3>

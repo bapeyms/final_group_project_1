@@ -62,4 +62,38 @@ document.addEventListener('DOMContentLoaded', () => {
             input.focus();
         });
     });
+
+    const modal = document.getElementById("authModal");
+    const closeBtn = document.getElementById("closeModal");
+    
+    document.querySelectorAll("#login-btn").forEach(btn => {
+        btn.onclick = () => openModal("login");
+    });
+    
+    document.querySelectorAll("#sign-up-btn").forEach(btn => {
+        btn.onclick = () => openModal("signup");
+    });
+    
+    function openModal(type) {
+        modal.classList.add("active");
+        switchTab(type);
+    }
+    
+    closeBtn.onclick = () => modal.classList.remove("active");
+    
+    modal.onclick = e => {
+        if (e.target === modal) modal.classList.remove("active");
+    };
+    
+    const tabs = document.querySelectorAll(".auth-tab");
+    const forms = document.querySelectorAll(".auth-form");
+    
+    function switchTab(type) {
+        tabs.forEach(t => t.classList.toggle("active", t.dataset.form === type));
+        forms.forEach(f => f.classList.toggle("active", f.id === type));
+    }
+    
+    tabs.forEach(tab => {
+        tab.onclick = () => switchTab(tab.dataset.form);
+    });
 });

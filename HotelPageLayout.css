@@ -24,7 +24,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 1em auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 #nav-left, #nav-right{
     display: flex;

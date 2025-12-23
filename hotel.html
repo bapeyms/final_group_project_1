@@ -28,9 +28,18 @@
                     </a>
                 </div>
                 
-                 <div id="nav-right">
-                    <a href="#">Login</a>
-                    <button>Sign up</button>
+                <div id="nav-right">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <img src="photos_hotel/account-25.png" class="nav-settings">
+                        </button>
+                        <div class="dropdown-content">
+                            <button class="tab active" data-tab="login" id="login-btn">Login</button>
+                            <button class="tab" data-tab="signup" id="sign-up-btn">Sign up</button>
+                        </div>
+                    </div>
+                    <button class="tab active desktop-btn" data-tab="login" id="login-btn">Login</button>
+                    <button class="tab desktop-btn" data-tab="signup" id="sign-up-btn">Sign up</button>
                 </div>
         </nav>
 

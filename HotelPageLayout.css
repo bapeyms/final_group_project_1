@@ -686,6 +686,10 @@
     .recent-search-block, .fall-travel-cards{
         grid-template-columns: repeat(2, 1fr);
     }
+    /* FALL INTO TRAVEL BLOCK 1 CARDS */
+    .travel-card, .travel-card img{
+    height: 350px;
+    }
 }
 
 @media (max-width: 1024px) {

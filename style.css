@@ -904,7 +904,7 @@ img
 
     #nav{
         justify-content: center;
-        margin: 1em 1em;
+        margin: 0 1em;
         gap: 10px;
     }
     #nav-left{

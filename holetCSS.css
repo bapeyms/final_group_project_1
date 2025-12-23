@@ -4,17 +4,17 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-@font-face 
-{
+@font-face{
     font-family: Montserrat;
     src: url(font/Montserrat.ttf);
 }
-
-@font-face {
+@font-face{
     font-family: Ramabhadra;
     src: url(font/Ramabhadra.ttf);
 }
-#nav {
+
+/* NAVIGATION */
+#nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,14 +26,12 @@
     margin: 1em auto;
     padding: 0 20px;
 }
-
-#nav-left, #nav-right {
+#nav-left, #nav-right{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
-#nav a {
+#nav a{
     display: flex;
     align-items: center;
     gap: 6px;
@@ -41,7 +39,7 @@
     color: #000;
     height: 60px;
 }
-#nav a, #nav button {
+#nav a, #nav button{
     font-size: 14.5px;
     font-family: inherit;
     font-weight: 500;
@@ -54,7 +52,7 @@
     border: none;
     cursor: pointer;
 }
-#nav #sign-up-btn {
+#nav #sign-up-btn{
     padding: 8px 16px;
     border-radius: 8px;
     background: #112211;
@@ -71,32 +69,35 @@
 #nav a:hover{
     text-decoration: underline;
 }
-
-.nav-logo {
+.nav-logo{
     width: 110.35px;
     height: 36px;
 }
-
-.nav-settings {
+.nav-settings{
     width: 24px;
     height: 24px;
 }
+#stays{
+    height: 100%;
+    border-bottom: 4px solid #8DD3BB;
+}
 
-.dropdown { 
+/* DROPDOWN MENU FOR LOG IN AND SIGN UP */
+.dropdown{ 
     display: none; 
     position: relative;
 }
-.desktop-btn { display: inline-block; }
-
-.dropbtn {
+.desktop-btn{ 
+    display: inline-block; 
+}
+.dropbtn{
     background-color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
-.dropdown-content {
+.dropdown-content{
     display: none;
     position: absolute;
     min-width: 120px;
@@ -107,8 +108,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
-.dropdown-content .tab {
+.dropdown-content .tab{
     display: block;
     padding: 10px;
     text-align: left;
@@ -117,17 +117,12 @@
     width: 100%;
     cursor: pointer;
 }
-
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content{
     display: flex;
 }
 
-#stays{
-    height: 100%;
-    border-bottom: 4px solid #8DD3BB;
-}
-
-.auth-modal {
+/* MODAL WINDOW FOR LOG IN AND SIGN UP */
+.auth-modal{
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
@@ -136,12 +131,10 @@
   align-items: center;
   z-index: 1000;
 }
-
-.auth-modal.active {
+.auth-modal.active{
   display: flex;
 }
-
-.auth-box {
+.auth-box{
   background: #fff;
   width: 25em;
   height: 400px;
@@ -149,22 +142,19 @@
   border-radius: 16px;
   position: relative;
 }
-
-.close {
+.close{
   position: absolute;
   top: 12px;
   right: 16px;
   font-size: 24px;
   cursor: pointer;
 }
-
-.auth-tabs {
+.auth-tabs{
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
-
-.auth-tab {
+.auth-tab{
   flex: 1;
   padding: 10px;
   margin-top: 20px;
@@ -173,17 +163,14 @@
   cursor: pointer;
   background: #eee;
 }
-
-.auth-tab.active {
+.auth-tab.active{
   background: #112211;
   color: white;
 }
-
-.auth-form {
+.auth-form{
   display: none;
 }
-
-.auth-form.active {
+.auth-form.active{
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -191,14 +178,12 @@
 .auth-tab.active:hover{
     background: #8fd3b6;
 }
-
-.auth-form input {
+.auth-form input{
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
-
-.auth-form button {
+.auth-form button{
   background: #8fd3b6;
   border: none;
   padding: 12px;
@@ -211,6 +196,7 @@
     background: #73a991;
 }
 
+/* HEADER */
 #back-photo{
     width: 100%;
     height: 80vh;
@@ -225,7 +211,6 @@
     margin-top: 0.5em;
     margin-bottom: 3em;
 }
-
 #header-text{
     display: flex;
     flex-direction: column;
@@ -249,6 +234,193 @@
     letter-spacing: 0.5px;
 }
 
+/* WHERE ARE YOU STAYING FORM*/
+.search-section{
+    position: relative;
+    z-index: 10;
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+.search-card{
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    margin-top: -100px; 
+}
+.search-tabs{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+.search-tab{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #112211;
+    padding-bottom: 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.search-tab.active{
+    border-bottom: 3px solid #8DD3BB;
+    color: #112211;
+    opacity: 1;
+}
+.search-inputs-row{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.input-group{
+    border: 1px solid #79747E;
+    border-radius: 4px;
+    padding: 8px 16px;
+    flex: 1;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-group label{
+    display: block;
+    font-size: 12px;
+    color: #112211;
+    margin-bottom: 4px;
+}
+.clean-input{
+    border: none;
+    outline: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #112211;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+.dual-input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.dual-input .clean-input{
+    flex: 1;
+}
+.input-icon-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.hidden{
+    display: none !important;
+}
+.separator{
+    color: #112211;
+    font-weight: 500;
+    padding: 0 4px;
+    flex-shrink: 0;
+}
+.date-small{
+    font-size: 14px;
+}
+.clean-number::-webkit-outer-spin-button, .clean-number::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.clean-number{
+    width: 30px;
+    flex: none !important;
+}
+.search-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+.add-promo{
+    text-decoration: none;
+    color: #112211;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-show-flights{
+    background-color: #8DD3BB;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.2s;
+}
+.btn-show-flights:hover{
+    background-color: #7bc1a9;
+}
+
+/* RECENT SEARCH BLOCK */
+#recent-search{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: -30px auto 50px auto; 
+    padding: 0 20px;
+}
+#recent-search h2{
+    margin-bottom: 0.8em;
+}
+.recent-search-block{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2.2em;
+}
+.trip-card{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.trip-card:hover{
+    transform: translateY(-5px);
+}
+.trip-image{
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.trip-info h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 4px;
+}
+.trip-info p{
+    font-size: 14px;
+    color: #112211;
+    opacity: 0.7;
+}
+
+/* FALL INTO TRAVEL BLOCK */
 #fall-into-travel-2{
     display: flex;
     flex-direction: column;
@@ -280,6 +452,8 @@
 #fall-into-travel-info #see-all:hover{
     background: #8DD3BB;
 }
+
+/* SRI LANKA BLOCK */
 #sri-lanka{
     display: flex;
     gap: 15px;
@@ -318,242 +492,15 @@
     background-color: #e2e0e0;
 }
 
-.search-section{
-    position: relative;
-    z-index: 10;
-    margin-bottom: 80px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-}
-
-.search-card 
-{
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
-    margin-top: -100px; 
-}
-
-.search-tabs 
-{
-    display: flex;
-    gap: 30px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid #E0E0E0;
-    padding-bottom: 10px;
-}
-
-.search-tab 
-{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #112211;
-    padding-bottom: 10px;
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-.search-tab.active 
-{
-    border-bottom: 3px solid #8DD3BB;
-    color: #112211;
-    opacity: 1;
-}
-
-.search-inputs-row 
-{
-    display: flex;
-    gap: 16px;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-}
-
-.input-group 
-{
-    border: 1px solid #79747E;
-    border-radius: 4px;
-    padding: 8px 16px;
-    flex: 1;
-    position: relative;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.input-group label 
-{
-    display: block;
-    font-size: 12px;
-    color: #112211;
-    margin-bottom: 4px;
-}
-
-.clean-input 
-{
-    border: none;
-    outline: none;
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #112211;
-    width: 100%;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-}
-
-.dual-input 
-{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.dual-input .clean-input 
-{
-    flex: 1;
-}
-
-.input-icon-wrapper 
-{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.hidden 
-{
-    display: none !important;
-}
-
-.separator 
-{
-    color: #112211;
-    font-weight: 500;
-    padding: 0 4px;
-    flex-shrink: 0;
-}
-
-.date-small 
-{
-    font-size: 14px;
-}
-
-.clean-number::-webkit-outer-spin-button,
-.clean-number::-webkit-inner-spin-button 
-{
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.clean-number 
-{
-    width: 30px;
-    flex: none !important;
-}
-
-.search-footer 
-{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 24px;
-}
-
-.add-promo 
-{
-    text-decoration: none;
-    color: #112211;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.btn-show-flights 
-{
-    background-color: #8DD3BB;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    transition: background-color 0.2s;
-}
-
-.btn-show-flights:hover 
-{
-    background-color: #7bc1a9;
-}
-
-#recent-search{
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: -30px auto 50px auto; 
-    padding: 0 20px;
-}
-#recent-search h2{
-    margin-bottom: 0.8em;
-}
-.recent-search-block{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 2.2em;
-}
-.trip-card 
-{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-.trip-card:hover {
-    transform: translateY(-5px);
-}
-.trip-image {
-    width: 90px;
-    height: 90px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-.trip-info h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
-    margin-bottom: 4px;
-}
-.trip-info p {
-    font-size: 14px;
-    color: #112211;
-    opacity: 0.7;
-}
-
-.footer {
+/* FOOTER */
+.footer{
     background-color: #8DD3BB;
     position: relative;
     width: 100%;
     height: auto;
     padding-bottom: 30px;
 }
-
-.subscribe-banner
-{
+.subscribe-banner{
     background-color: #CDEAE1;
     width: 95%;
     margin: 0 auto;
@@ -567,45 +514,33 @@
     top: -100px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
 }
-
-.subscribe-content h2
-{
+.subscribe-content h2{
     font-size: 44px;
     font-weight: 700;
     margin-bottom: 24px;
 }
-
-.sub-title
-{
+.sub-title{
     font-size: 20px;
     font-weight: 700;
     opacity: 0.8;
 }
-
-.sub-text
-{
+.sub-text{
     font-size: 16px;
     opacity: 0.6;
     margin-bottom: 16px;
 }
-
-.subscribe-form
-{
+.subscribe-form{
     display: flex;
     gap: 16px;
 }
-
-.subscribe-form input
-{
+.subscribe-form input{
     padding: 18px 24px;
     border-radius: 4px;
     border: none;
     width: 100%;
     font-size: 16px;
 }
-
-.subscribe-form button
-{
+.subscribe-form button{
     background-color: #112211;
     color: white;
     border: none;
@@ -617,43 +552,33 @@
 .subscribe-form button:hover{
     background-color: #363636;
 }
-
-.mailbox-img {
+.mailbox-img{
     max-width: 100%;
     height: auto;
 }
-
-.footer-main {
+.footer-main{
     display: flex;
     justify-content: center;
     width: 95%;
     gap: 80px;
     margin: -40px auto 0;
 }
-
-.social-links
-{
+.social-links{
     display: flex;
     gap: 12px;
     margin-top: 24px;
 }
-
-.footer-links
-{
+.footer-links{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 40px;
 }
-
-.footer-col h4
-{
+.footer-col h4{
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 16px;
 }
-
-.footer-col a
-{
+.footer-col a{
     display: block;
     text-decoration: none;
     color: #112211;
@@ -661,14 +586,12 @@
     opacity: 0.6;
     margin-bottom: 12px;
 }
-
 .subscribe-banner{
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     top: -100px;
 }
-
 .footer-main{
     max-width: 1200px;
     margin: -40px auto 0 auto;
@@ -678,27 +601,30 @@
     padding: 0 20px;
 }
 
+/* ADAPTATION */
 @media (max-width: 1200px){
+    /* RECENT SEARCH BLOCK */
     .recent-search-block{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 1024px) {
-    .search-section {
+    /* WHERE ARE YOU STAYING FORM */
+    .search-section{
         padding: 0 24px;
     }
-
-    .search-inputs-row {
+    .search-inputs-row{
         gap: 12px;
     }
-
-    .input-group {
+    .input-group{
         flex: 1 1 calc(50% - 12px);
     }
-
-    .input-group[style*="flex: 2"], .input-group[style*="flex: 1.5"] {
+    .input-group[style*="flex: 2"], .input-group[style*="flex: 1.5"]{
         flex: 1 1 100%;
     }
+
+    /* SRI LANKA BLOCK */
     #sri-lanka{
         flex-direction: column;
     }
@@ -706,17 +632,17 @@
         width: 100%;
         height: auto;
     }
-    .sri-lanka-gallery img {
+    .sri-lanka-gallery img{
         width: 100%;
         height: auto;
         display: block;
     }
-    .mailbox-img 
-    {
+
+    /* FOOTER */
+    .mailbox-img{
         display: none;
     }
-    .subscribe-banner 
-    {
+    .subscribe-banner{
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
@@ -745,7 +671,9 @@
         padding-right: 30px;
     }
 }
+
 @media screen and (max-width: 780px){
+    /* NAVIGATION */
     #nav{
         justify-content: center;
         margin: 1em 1em;
@@ -767,6 +695,7 @@
     #nav #login-btn{ border: 2px solid #112211; }
     #nav #login-btn:hover{ border: 2px solid #8DD3BB; }
     
+    /* HEADER */
     #back-photo{
         margin-top: 1em;
         height: 50vh;
@@ -782,41 +711,44 @@
         margin-top: 0.2em;
         font-size: medium;
     }
-    .search-card {
+
+    /* WHERE ARE YOU STAYING FORM */
+    .search-card{
         padding: 20px;
         margin-top: -60px;
     }
-
-    .search-tabs {
+    .search-tabs{
         margin-bottom: 16px;
     }
-
-    .search-inputs-row {
+    .search-inputs-row{
         flex-direction: column;
         gap: 12px;
     }
-
-    .input-group {
+    .input-group{
         width: 100%;
     }
-
-    .search-footer {
+    .search-footer{
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
     }
-
-    .btn-show-flights {
+    .btn-show-flights{
         width: 100%;
         justify-content: center;
     }
-    .recent-search-block {
+
+    /* RECENT SEARCH BLOCK */
+    .recent-search-block{
         grid-template-columns: 1fr;
         gap: 1.5em;
     }
+
+    /* SHI LANKA BLOCK */
     .sri-lanka-gallery{
         display: none;
     }
+
+    /* FOOTER */
     .footer-brand{
         display: flex;
         justify-content: space-around;
@@ -827,37 +759,34 @@
     .footer-links{
         order: 1;
     }
-    .footer-main 
-    {
+    .footer-main{
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    .footer-links 
-    {
+    .footer-links{
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
         margin: 0 auto;
     }
-    .subscribe-form 
-    {
+    .subscribe-form{
         flex-direction: column;
         width: 100%;
     }
-    .subscribe-form input, .subscribe-form button 
-    {
+    .subscribe-form input, .subscribe-form button{
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .search-card {
+    /* WHERE ARE YOU STAYING FORM */
+    .search-card{
         border-radius: 12px;
     }
-    .clean-input {
+    .clean-input{
         font-size: 14px;
     }
-    .btn-show-flights {
+    .btn-show-flights{
         padding: 14px;
     }
 }

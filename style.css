@@ -293,7 +293,6 @@ body
     background-color: #f0f0f0;
 }
 
-
 .clean-number 
 {
     width: 40px !important;
@@ -305,6 +304,43 @@ body
     flex: 1;
     cursor: pointer;
     min-width: 80px;
+}
+
+.input-icon-wrapper 
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.input-icon-wrapper img 
+{
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.input-icon-wrapper .clean-input,
+.input-icon-wrapper select 
+{
+    flex: 1;
+    width: 100%;
+}
+
+#stays-form input[type="date"] 
+{
+    min-width: 110px; 
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    color: #112211;
+    font-weight: 500;
+}
+
+#stays-form .input-group 
+{
+    justify-content: center;
 }
 
 .search-footer 

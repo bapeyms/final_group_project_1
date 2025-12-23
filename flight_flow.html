@@ -134,7 +134,7 @@
 
     .sec-slide {
       width: 100%;
-      background: linear-gradient(to right, rgba(25, 38, 122, 0.6) 0%, rgba(0, 0, 0, 0) 80%), url(image.jpg);
+      background: linear-gradient(to right, rgba(25, 38, 122, 0.6) 0%, rgba(0, 0, 0, 0) 80%), url(pics/image.jpg);
       background-size: cover;
       background-position: top;
       background-repeat: no-repeat;
@@ -478,22 +478,28 @@
       position: relative;
       width: 100%;
       height: auto;
+      margin-top: 150px;
       padding-bottom: 30px;
     }
 
     .subscribe-banner {
       background-color: #CDEAE1;
       width: 95%;
+      max-width: 1200px;
       margin: 0 auto;
       border-radius: 20px;
-      padding: 0 20px 0 20px;
       display: flex;
       justify-content: space-between;
-      gap: 40px;
       align-items: center;
       position: relative;
       top: -100px;
+      padding: 15px;
       box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .subscribe-content {
+      flex: 1;
+      max-width: 600px;
     }
 
     .subscribe-content h2 {
@@ -515,30 +521,39 @@
     }
 
     .subscribe-form {
-      display: flex;
+      display: flex !important;
       gap: 16px;
+      margin-top: 24px;
+      width: 100%;
     }
 
     .subscribe-form input {
+      background-color: #ffffff;
+      border: 1px solid transparent;
+      outline: none;
+      border-radius: 8px;
       padding: 18px 24px;
-      border-radius: 4px;
-      border: none;
-      width: 100%;
+      flex: 1;
       font-size: 16px;
+      color: #112211;
     }
 
     .subscribe-form button {
       background-color: #112211;
-      color: white;
+      color: #ffffff;
       border: none;
+      border-radius: 8px;
       padding: 18px 32px;
-      border-radius: 4px;
       font-weight: 600;
+      font-size: 16px;
       cursor: pointer;
+      white-space: nowrap;
+      transition: 0.3s;
+      flex-shrink: 0;
     }
 
     .subscribe-form button:hover {
-      background-color: #363636;
+      background-color: #2a3d2a;
     }
 
     .mailbox-img {
@@ -751,7 +766,7 @@
 
     #fall-into-travel-1 {
       font-family: sans-serif;
-      margin: 0 5.7em;
+      margin: 1em 5.7em;
       margin-top: 120px;
     }
 
@@ -942,10 +957,8 @@
         box-sizing: border-box;
         text-align: center;
         margin-right: 0 !important;
-
         margin-top: 10px;
         padding: 12px 0;
-
       }
 
       .text_map {
@@ -961,20 +974,20 @@
     <div id="nav-left">
       <div id="flight">
         <a href="#">
-          <img src="airplane.png" class="nav-settings">
+          <img src="pics/airplane.png" class="nav-settings">
           <p class="nav-p">Find Flight</p>
         </a>
       </div>
       <div id="stays">
         <a href="#">
-          <img src="ion_bed.png" class="nav-settings">
+          <img src="pics/ion_bed.png" class="nav-settings">
           <p class="nav-p">Find Stays</p>
         </a>
       </div>
     </div>
 
     <div id="logo">
-      <img src="Logo.png" class="nav-logo">
+      <img src="pics/Logo.png" class="nav-logo">
     </div>
     <div id="nav-right">
       <a href="#">Login</a>
@@ -1051,7 +1064,7 @@
             <div class="search-footer">
               <a href="#" class="add-promo">+ Add Promo Code</a>
               <button class="btn-show-flights">
-                <img src="Header/plane.png" width="16" style="filter: brightness(0);">
+                <img src="pics/airplane.png" width="16" style="filter: brightness(0);">
                 Show Flights
               </button>
             </div>
@@ -1062,41 +1075,22 @@
               <div class="input-group" style="flex: 2;">
                 <label>Enter Destination</label>
                 <div class="input-icon-wrapper">
-                  <img src="Header/bed2.png" width="16">
+                  <img src="pics/ion_bed.png" width="16">
                   <input list="cities" placeholder="Enter Destination" class="clean-input">
                 </div>
               </div>
-
               <div class="input-group">
                 <label>Check In</label>
                 <input type="date" class="clean-input">
               </div>
-
               <div class="input-group">
                 <label>Check Out</label>
                 <input type="date" class="clean-input">
               </div>
-
-              <div class="input-group" style="flex: 1.5;">
-                <label>Rooms & Guests</label>
-                <div class="input-icon-wrapper">
-                  <img src="Header/user.png" width="16">
-                  <select class="clean-input">
-                    <option>1 room, 1 guest</option>
-                    <option>1 room, 2 guests</option>
-                    <option>2 rooms, 4 guests</option>
-                  </select>
-                </div>
+              <div class="search-footer">
+                <a href="#" class="add-promo">+ Add Promo Code</a>
+                <button class="btn-show-flights">
               </div>
-            </form>
-
-            <div class="search-footer">
-              <a href="#" class="add-promo">+ Add Promo Code</a>
-              <button class="btn-show-flights">
-                <img src="Header/bed.png" width="16" style="filter: brightness(0);">
-                Show Places
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -1114,7 +1108,7 @@
 
     <div class="fall-travel-cards">
       <div class="travel-card">
-        <img src="travel1.jpg" alt="Melbourne">
+        <img src="pics/travel1.jpg" alt="Melbourne">
         <div class="card-content">
           <div class="top-row">
             <div class="text-left">
@@ -1128,7 +1122,7 @@
       </div>
 
       <div class="travel-card">
-        <img src="travel2.jpg" alt="Paris">
+        <img src="pics/travel2.jpg" alt="Paris">
         <div class="card-content">
           <div class="top-row">
             <div class="text-left">
@@ -1142,7 +1136,7 @@
       </div>
 
       <div class="travel-card">
-        <img src="travel3.jpg" alt="London">
+        <img src="pics/travel3.jpg" alt="London">
         <div class="card-content">
           <div class="top-row">
             <div class="text-left">
@@ -1156,7 +1150,7 @@
       </div>
 
       <div class="travel-card">
-        <img src="travel4.jpg" alt="Columbia">
+        <img src="pics/travel4.jpg" alt="Columbia">
         <div class="card-content">
           <div class="top-row">
             <div class="text-left">
@@ -1180,7 +1174,7 @@
       <button id="btn-see-all">See all</button>
     </div>
   </div>
-  <img src="Frame 2608705.png" id="img_map">
+  <img src="pics/Frame 2608705.png" id="img_map">
 
   <div id="fall-into-travel-2">
     <h2>Fall into travel</h2>
@@ -1200,10 +1194,10 @@
         <button id="book-button-sri-lanka">Book Flight</button>
       </div>
       <div class="sri-lanka-gallery">
-        <img src="Rectangle 3 (2).png" alt="">
-        <img src="Rectangle 3.png" alt="">
-        <img src="Rectangle 3 (1).png" alt="">
-        <img src="Rectangle 3.0png.png" alt="">
+        <img src="pics/Rectangle 3 (2).png" alt="">
+        <img src="pics/Rectangle 3.png" alt="">
+        <img src="pics/Rectangle 3 (1).png" alt="">
+        <img src="pics/Rectangle 3.0png.png" alt="">
       </div>
     </div>
 
@@ -1215,22 +1209,22 @@
         <h2>Subscribe Newsletter</h2>
         <p class="sub-title">The Travel</p>
         <p class="sub-text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-        <form class="subscribe-form">
+        <div class="subscribe-form">
           <input type="email" placeholder="Your email address">
           <button type="submit">Subscribe</button>
-        </form>
+        </div>
       </div>
-      <img src="emojione-v1_open-mailbox-with-lowered-flag.png" class="mailbox-img">
+      <img src="pics/emojione-v1_open-mailbox-with-lowered-flag.png" class="mailbox-img">
     </div>
 
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="Group.png" alt="Golobe" class="footer-logo">
+        <img src="pics/Group.png" alt="Golobe" class="footer-logo">
         <div class="social-links">
-          <a href="#"><img src="akar-icons_facebook-fill.png" alt="FB"></a>
-          <a href="#"><img src="akar-icons_twitter-fill.png" alt="TW"></a>
-          <a href="#"><img src="akar-icons_youtube-fill.png" alt="YT"></a>
-          <a href="#"><img src="ant-design_instagram-filled.png" alt="IG"></a>
+          <a href="#"><img src="pics/akar-icons_facebook-fill.png" alt="FB"></a>
+          <a href="#"><img src="pics/akar-icons_twitter-fill.png" alt="TW"></a>
+          <a href="#"><img src="pics/akar-icons_youtube-fill.png" alt="YT"></a>
+          <a href="#"><img src="pics/ant-design_instagram-filled.png" alt="IG"></a>
         </div>
       </div>
 
@@ -1269,6 +1263,7 @@
       </div>
     </div>
   </footer>
+  <script src="flight_flow.js"></script>
 </body>
 
 </html>

@@ -826,6 +826,14 @@
         gap: 1.5em;
     }
 
+    /* FALL INTO TRAVEL BLOCK 1 CARDS */
+    .fall-travel-cards{
+        grid-template-columns: 1fr;
+    }
+    .travel-card, .travel-card img{
+    height: 300px;
+    }
+
     /* SHI LANKA BLOCK */
     .sri-lanka-gallery{
         display: none;

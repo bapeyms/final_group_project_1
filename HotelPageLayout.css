@@ -6,11 +6,11 @@
 }
 @font-face{
     font-family: Montserrat;
-    src: url(font/Montserrat.ttf);
+    src: url(HotelPageFonts/Montserrat.ttf);
 }
 @font-face{
     font-family: Ramabhadra;
-    src: url(font/Ramabhadra.ttf);
+    src: url(HotelPageFonts/Ramabhadra.ttf);
 }
 
 /* NAVIGATION */

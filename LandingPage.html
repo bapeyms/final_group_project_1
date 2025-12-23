@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golobe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="LandingPageLayout.css">
 </head>
 <body>
     <!-- Header -->
@@ -16,7 +16,7 @@
                     <p class="nav-p">Find Flight</p>
                 </a>
                     <div id="stays">
-                        <a href="hotel.html">
+                        <a href="HotelPage.html">
                             <img src="Header/bed.png" class="nav-settings">
                             <p class="nav-p">Find Stays</p>
                         </a>
@@ -35,12 +35,12 @@
                             <img src="photos_hotel/account-25.png" class="nav-settings" id="user-icon">
                         </button>
                         <div class="dropdown-content">
-                            <button class="tab active" data-tab="login" id="login-btn">Login</button>
-                            <button class="tab" data-tab="signup" id="sign-up-btn">Sign up</button>
+                            <button class="tab active login-btn" data-tab="login" id="login-btn-dd">Login</button>
+                            <button class="tab sign-up-btn" data-tab="signup" id="signup-btn-dd">Sign up</button>
                         </div>
                     </div>
-                    <button class="tab active desktop-btn" data-tab="login" id="login-btn">Login</button>
-                    <button class="tab desktop-btn" data-tab="signup" id="sign-up-btn">Sign up</button>
+                    <button class="tab active desktop-btn login-btn" data-tab="login" id="login-btn-desktop">Login</button>
+                    <button class="tab desktop-btn sign-up-btn" data-tab="signup" id="signup-btn-desktop">Sign up</button>
                 </div>
         </nav>
       
@@ -298,7 +298,7 @@
             <div class="booking-content">
                 <h2 class="booking-title">Hotels</h2>
                 <p class="booking-text">Search hotels & Places Hire to our most popular destinations</p>
-                <a href="hotel.html" class="btn-booking">
+                <a href="HotelPage.html" class="btn-booking">
                     <img src="Header/plane.png" width="16" style="filter: brightness(0);">
                     Show Hotels
                 </a>
@@ -425,7 +425,7 @@
         </div>
     </footer>
 
-    <script src="Landing.js"></script>
+    <script src="LandingPageLogic.js"></script>
     
 </body>
 </html>

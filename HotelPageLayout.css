@@ -44,7 +44,7 @@
     font-family: inherit;
     font-weight: 500;
 }
-#nav #login-btn{
+#nav .login-btn{
     padding: 8px 16px;
     border-radius: 8px;
     background: #ffffff;
@@ -52,7 +52,7 @@
     border: none;
     cursor: pointer;
 }
-#nav #sign-up-btn{
+#nav .sign-up-btn{
     padding: 8px 16px;
     border-radius: 8px;
     background: #112211;
@@ -60,10 +60,10 @@
     border: none;
     cursor: pointer;
 }
-#nav #sign-up-btn:hover{
+#nav .sign-up-btn:hover{
     background-color: #8DD3BB;
 }
-#nav #login-btn:hover{
+#nav .login-btn:hover{
     text-decoration: underline;
 }
 #nav a:hover{
@@ -234,7 +234,7 @@
     letter-spacing: 0.5px;
 }
 
-/* WHERE ARE YOU STAYING FORM*/
+/* WHERE ARE YOU STAYING FORM */
 .search-section{
     position: relative;
     z-index: 10;

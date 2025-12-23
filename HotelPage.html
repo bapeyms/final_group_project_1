@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
-    <link rel="stylesheet" href="holetCSS.css">
+    <link rel="stylesheet" href="HotelPageLayout.css">
 </head>
 <body>
     <div id="hotel-page">
+        <!-- HAVIGATION -->
         <nav id="nav">
             <div id="nav-left">
                 <a href="#">
@@ -29,20 +30,22 @@
                 </div>
                 
                 <div id="nav-right">
+                    <!-- DROPDOWN MENU FOR LOG IN AND SIGN UP -->
                     <div class="dropdown">
                         <button class="dropbtn">
                             <img src="photos_hotel/account-25.png" class="nav-settings">
                         </button>
                         <div class="dropdown-content">
-                            <button class="tab active" data-tab="login" id="login-btn">Login</button>
-                            <button class="tab" data-tab="signup" id="sign-up-btn">Sign up</button>
+                            <button class="tab active login-btn" data-tab="login" id="login-btn-dd">Login</button>
+                            <button class="tab sign-up-btn" data-tab="signup" id="signup-btn-dd">Sign up</button>
                         </div>
                     </div>
-                    <button class="tab active desktop-btn" data-tab="login" id="login-btn">Login</button>
-                    <button class="tab desktop-btn" data-tab="signup" id="sign-up-btn">Sign up</button>
+                    <button class="tab active desktop-btn login-btn" data-tab="login" id="login-btn-desktop">Login</button>
+                    <button class="tab desktop-btn sign-up-btn" data-tab="signup" id="signup-btn-desktop">Sign up</button>
                 </div>
         </nav>
-
+        
+        <!-- MODAL WINDOW FOR LOG IN AND SIGN UP -->
         <div class="auth-modal" id="authModal">
             <div class="auth-box">
                 <span class="close" id="closeModal">&times;</span>
@@ -68,6 +71,7 @@
             </div>
         </div>
 
+        <!-- HEADER -->
         <div id="back-photo">
             <div id="header-text">
                 <h3>Make your travel wishlist, we'll do the rest</h3>
@@ -75,6 +79,7 @@
             </div>
         </div>
 
+        <!-- WHERE ARE YOU STAYING FORM -->
         <div class="search-section">
             <div class="search-card">
             <div class="search-tabs">
@@ -136,6 +141,7 @@
             </div>
         </div>
 
+        <!-- RECENT SEARCH BLOCK -->
         <div id="recent-search">
             <h2>Your recent searches</h2>
             <div class="recent-search-gallery">
@@ -175,22 +181,27 @@
             </div>
         </div>
 
+        <!-- FALL INTO TRAVEL BLOCK -->
         <div id="fall-into-travel-2">
             <h2>Fall into travel</h2>
             <div id="fall-into-travel-info">
-                <p>Going somewhere to celebrate this season?
-                    Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</p>
-                    <button id="see-all">See All</button>
+                <p>
+                    Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, 
+                    we’ve got the travel tools to get you to your destination.
+                </p>
+                <button id="see-all">See All</button>
             </div>
             <div id="sri-lanka">
                 <div id="left-shi-lanka">
-                        <h1>Backpacking</h1>
-                        <h1>Sri Lanka</h1>
-                        <p> Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life.
-                             It helps us to forget about our problems, frustrations, and fears at home. 
-                             During our journey, we experience life in different ways. 
-                             We explore new places, cultures, cuisines, traditions, and ways of living.</p>
-                        <button id="book-button-sri-lanka">Book Flight</button>
+                    <h1>Backpacking</h1>
+                    <h1>Sri Lanka</h1>
+                    <p> 
+                        Traveling is a unique experience as it's the best way to unplug from the pushes and 
+                        pulls of daily life. It helps us to forget about our problems, frustrations, 
+                        and fears at home. During our journey, we experience life in different ways. 
+                        We explore new places, cultures, cuisines, traditions, and ways of living.
+                    </p>
+                    <button id="book-button-sri-lanka">Book Flight</button>
                 </div>
                 <div class="sri-lanka-gallery">
                         <img src="photos_hotel/Rectangle 3.png" alt="">
@@ -198,9 +209,10 @@
                         <img src="photos_hotel/Rectangle 3 (3).png" alt="">
                         <img src="photos_hotel/Rectangle 3 (1).png" alt="">
                 </div>
-            </div>
-            
+            </div>  
         </div>
+
+        <!-- FOOTER -->
         <footer class="footer">
         <div class="subscribe-banner">
             <div class="subscribe-content">
@@ -264,6 +276,6 @@
         </div>
     </footer>
     </div>
-    <script src="hotelJS.js"></script>
+    <script src="HotelPageLogic.js"></script>
 </body>
 </html>

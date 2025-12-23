@@ -18,9 +18,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1em 4em;
     height: 60px;
     font-weight: 500;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1em auto;
+    padding: 0 20px;
 }
 
 #nav-left, #nav-right {
@@ -164,7 +168,9 @@
 #fall-into-travel-2{
     display: flex;
     flex-direction: column;
-    margin: 10px 5.7em 0 5.7em;
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    padding: 0 20px;
 }
 #fall-into-travel-2 p{
     margin-top: 0.2em;
@@ -227,12 +233,15 @@
 #book-button-sri-lanka:hover{
     background-color: #e2e0e0;
 }
-.search-section 
-{
-    padding: 0 50px;
+
+.search-section{
     position: relative;
     z-index: 10;
     margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
 .search-card 
@@ -406,7 +415,9 @@
 #recent-search{
     display: flex;
     flex-direction: column;
-    margin: -30px 5.7em 50px 5.7em;
+    max-width: 1200px;
+    margin: -30px auto 50px auto; 
+    padding: 0 20px;
 }
 #recent-search h2{
     margin-bottom: 0.8em;
@@ -565,6 +576,22 @@
     font-size: 14px;
     opacity: 0.6;
     margin-bottom: 12px;
+}
+
+.subscribe-banner{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
+
+.footer-main{
+    max-width: 1200px;
+    margin: -40px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 0 20px;
 }
 
 @media (max-width: 1200px){

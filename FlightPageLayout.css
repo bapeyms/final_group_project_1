@@ -528,40 +528,16 @@
 
 /* MAP PLACES */
 .places_map {
-  font-family: sans-serif;
-  margin: 1em 5.7em;
-  margin-top: 2.5em;
+  margin: 0 5.7em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
-
-.text_map {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  width: 100%;
+.places_map h2{
+  margin-bottom: 5px;
 }
-
-.text_map h2 {
-  margin-bottom: 10px;
-}
-
-.text_map p {
-  max-width: 60%;
-}
-
-#btn-see-all {
-  border: 1px solid #8DD3BB;
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  height: fit-content;
-  font-family: inherit;
-  white-space: nowrap;
-}
-
 #img_map {
-  width: 100%
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 /* FOOTER */
@@ -570,7 +546,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: 150px;
   padding-bottom: 30px;
 }
 
@@ -760,304 +735,199 @@
   }
 }
 
-/* 3 text-block */
-#fall-into-travel-2 {
-  font-family: sans-serif;
-  margin: 40px 5.7em;
-}
-
-#fall-into-travel-info-2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-#fall-into-travel-2 h2 {
-  margin-bottom: 10px;
-}
-
-#fall-into-travel-2 p {
-  margin: 0;
-  color: #112211;
-  opacity: 0.7;
-  line-height: 1.5;
-  max-width: 80%;
-}
-
-#see-all-2 {
-  border: 1px solid #8DD3BB;
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  height: fit-content;
-  font-family: inherit;
-  white-space: nowrap;
-}
-
-#sri-lanka {
-  display: flex;
-  gap: 24px;
-  margin-bottom: 80px;
-}
-
-#left-shi-lanka {
-  background-color: #8DD3BB;
-  border-radius: 15px;
-  padding: 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#left-shi-lanka h1 {
-  font-size: 40px;
-  margin: 0;
-  color: #112211;
-}
-
-.sri-lanka-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  flex: 1;
-}
-
-.sri-lanka-gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-#book-button-sri-lanka {
-  width: 100%;
-  padding: 12px 0;
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-@media (max-width: 1024px) {
-  #fall-into-travel-2 {
-    margin: 40px 2em;
-  }
-
-  #sri-lanka {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  #fall-into-travel-2 #fall-into-travel-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .sri-lanka-gallery {
-    grid-template-columns: 1fr;
-  }
-}
 .search-card{
   padding: 20px;
   margin-top: -80px;
 }
 
-/* 1 text-block */
-#fall-into-travel-1 {
-  font-family: sans-serif;
-  margin: 1em 5.7em;
-  margin-top: 2em;
+.fall-into-travel-info{
+    display: flex;
+    gap: 10px;
 }
-
-#fall-into-travel-1 .content-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  width: 100%;
+.fall-into-travel-info .see-all{
+    border: 1px solid #8DD3BB;
+    background-color: white;
+    border-radius: 3px;
 }
-
-#fall-into-travel-1 h2 {
-  margin-bottom: 10px;
+.fall-into-travel-info .see-all:hover{
+    background: #8DD3BB;
+}
+#fall-into-travel-1, #fall-into-travel-2{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 10px auto 0 auto;
+    padding: 0 20px;
 }
 #fall-into-travel-1 h2, #fall-into-travel-2 h2{
     letter-spacing: 0.3px;
 }
-
-#fall-into-travel-1 p {
-  max-width: 80%;
+#fall-into-travel-1 p, #fall-into-travel-2 p{
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    flex: 6;
 }
-
-.btn-style {
-  /**/
-  border: 1px solid #8DD3BB;
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  height: fit-content;
-  font-family: inherit;
-  white-space: nowrap;
+#fall-into-travel-1 .see-all, #fall-into-travel-2 .see-all{
+    flex: 1;
+    width: 0.5em;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .fall-travel-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 2em;
 }
-
 .travel-card {
-  position: relative;
-  height: 450px;
-  border-radius: 12px;
-  overflow: hidden;
+    min-width: 220px;
+    position: relative;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
 }
-
 .travel-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
 }
-
 .travel-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
 }
-
 .card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  color: white;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+.text-left{
+    display: flex;
+    flex-direction: column;
+}
+.top-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.6em;
+}
+.city{
+    font-size: larger;
+    margin-bottom: 0.1em;
+}
+.info{
+    font-size: small;
+    opacity: 0.8;
+}
+.price{
+    font-weight: bolder;
+    font-size: large;
+    text-align: right;
+    white-space: nowrap;
+}
+.button-flight{
+    background-color: #8DD3BB;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button-flight:hover{
+    background-color: #7cc0a9;
 }
 
-.top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+#sri-lanka{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12em;
+}
+#left-shi-lanka{
+    background-color: #8DD3BB;
+    border-radius: 15px;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+#left-shi-lanka p{
+    margin-top: 1em;
+}
+.sri-lanka-gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.sri-lanka-gallery img{
+    width: 18em;
+    height: 200px;
+}
+#book-button-sri-lanka{
+    width: 98% !important;
+    padding: 8px 0;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+}
+#book-button-sri-lanka:hover{
+    background-color: #e2e0e0;
 }
 
-.city {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.info {
-  font-size: 14px;
-  margin: 4px 0 0 0;
-  opacity: 0.9;
-}
-
-.price {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.button-flight {
-  background-color: #8DD3BB;
-  border: none;
-  border-radius: 4px;
-  padding: 12px;
-  width: 100%;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.button-flight:hover {
-  background-color: #7cc0a9;
-}
-
-@media (max-width: 1200px) {
-  #fall-into-travel-1 {
-    margin: 120px 2em 0 2em;
+@media (max-width: 1024px){
+  #sri-lanka{
+    flex-direction: column;
   }
-
-  .fall-travel-cards {
+  .sri-lanka-gallery{
+    width: 100%;
+    height: auto;
+  }
+  .sri-lanka-gallery img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+@media (max-width: 1200px){
+  .places_map{
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .recent-search-block, .fall-travel-cards{
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media (max-width: 768px) {
-  #fall-into-travel-1 {
-    margin: 60px 1em 0 1em;
-  }
-
-  #fall-into-travel-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  #fall-into-travel-info h2 {
-    font-size: 24px;
-  }
-
-  #fall-into-travel-info p {
-    font-size: 14px;
-  }
-
-  #b-see-all {
-    width: 100%;
-    text-align: center;
-  }
-
-  .fall-travel-cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .travel-card {
+  .travel-card, .travel-card img{
     height: 350px;
   }
 }
-
-#b-see-all,
-#btn-see-all,
-#see-all {
-  border: 1px solid #8DD3BB;
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  height: fit-content;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  transition: background-color 0.2s;
-  white-space: nowrap;
-}
-
-#b-see-all:hover,
-#btn-see-all:hover,
-#see-all:hover {
-  background-color: #e2e0e0;
+@media screen and (max-width: 780px){
+  .fall-travel-cards{
+    grid-template-columns: 1fr;
+  }
+  .travel-card, .travel-card img{
+    height: 300px;
+  }
+  .sri-lanka-gallery{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-
-  #fall-into-travel-info,
   .text_map {
     flex-direction: column;
     align-items: flex-start;
@@ -1065,35 +935,15 @@
     margin-left: 0 !important;
     padding: 0 15px;
   }
-
   .text_map {
     display: flex;
     width: auto;
   }
-}
-
-@media (max-width: 1200px) {
-
-  .places_map,
-  #fall-into-travel-1,
-  #fall-into-travel-2 {
-    margin-left: 2em;
-    margin-right: 2em;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .places_map,
-  #fall-into-travel-1,
-  #fall-into-travel-2 {
+  .places_map {
     margin-left: 20px;
     margin-right: 20px;
   }
-
-  .text_map h2,
-  #fall-into-travel-1 h2,
-  #fall-into-travel-2 h2 {
+  .text_map h2 {
     font-size: 24px;
   }
 }

@@ -362,7 +362,7 @@
   font-size: 1.2rem;
 }
 
-/* --- INPUTS */
+/*INPUT DATES*/
 .search-inputs-row {
   display: flex;
   gap: 16px;
@@ -410,12 +410,14 @@
 .dual-input {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
   width: 100%;
 }
 
 .dual-input .clean-input {
   flex: 1;
+  min-width: 0;
+
 }
 
 .separator {

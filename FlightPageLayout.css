@@ -334,7 +334,7 @@
 .search-section {
   position: relative;
   z-index: 10;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -359,7 +359,6 @@
 
 .search-tabs p {
   margin: 0;
-  font-size: 1.2rem;
 }
 
 /*INPUT DATES*/
@@ -485,7 +484,7 @@
 
   /* HEADER */
   #back-photo {
-    height: 60vh;
+    height: 50vh;
   }
 
   #header-text {
@@ -524,10 +523,6 @@
 
   .btn-show-flights {
     justify-content: center;
-  }
-
-  .add-promo {
-    text-align: center;
   }
 }
 
@@ -868,6 +863,10 @@
   .sri-lanka-gallery {
     grid-template-columns: 1fr;
   }
+}
+.search-card{
+  padding: 20px;
+  margin-top: -80px;
 }
 
 /* 1 text-block */

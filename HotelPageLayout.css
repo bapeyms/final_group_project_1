@@ -442,6 +442,9 @@
     margin: 10px auto 0 auto;
     padding: 0 20px;
 }
+#fall-into-travel-1 h2, #fall-into-travel-2 h2{
+    letter-spacing: 0.3px;
+}
 #fall-into-travel-1 p, #fall-into-travel-2 p{
     margin-top: 0.2em;
     margin-bottom: 1em;

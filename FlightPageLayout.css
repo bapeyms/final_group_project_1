@@ -533,7 +533,7 @@
 .places_map {
   font-family: sans-serif;
   margin: 1em 5.7em;
-  margin-top: 100px;
+  margin-top: 2.5em;
 }
 
 .text_map {
@@ -545,7 +545,6 @@
 }
 
 .text_map h2 {
-  font-size: 32px;
   margin-bottom: 10px;
 }
 
@@ -779,7 +778,6 @@
 }
 
 #fall-into-travel-2 h2 {
-  font-size: 32px;
   margin-bottom: 10px;
 }
 
@@ -874,7 +872,7 @@
 #fall-into-travel-1 {
   font-family: sans-serif;
   margin: 1em 5.7em;
-  margin-top: 120px;
+  margin-top: 2em;
 }
 
 #fall-into-travel-1 .content-row {
@@ -886,8 +884,10 @@
 }
 
 #fall-into-travel-1 h2 {
-  font-size: 32px;
   margin-bottom: 10px;
+}
+#fall-into-travel-1 h2, #fall-into-travel-2 h2{
+    letter-spacing: 0.3px;
 }
 
 #fall-into-travel-1 p {

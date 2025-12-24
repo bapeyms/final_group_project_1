@@ -9,140 +9,155 @@
 </head>
 
 <body>
-  <nav id="nav">
-    <div id="nav-left">
-      <div id="flight">
-        <a href="#">
-          <img src="pics/airplane.png" class="nav-settings">
-          <p class="nav-p">Find Flight</p>
-        </a>
-      </div>
-      <div id="stays">
-        <a href="#">
-          <img src="pics/ion_bed.png" class="nav-settings">
+  <div id="flight-page">
+    <nav id="nav">
+      <div id="nav-left">
+        <div id="active-link">
+          <a href="#">
+            <img src="photos_hotel/airplane.png" class="nav-settings">
+            <p class="nav-p">Find Flight</p>
+          </a>
+        </div>
+
+        <a href="HotelPage.html">
+          <img src="photos_hotel/ion_bed.png" class="nav-settings">
           <p class="nav-p">Find Stays</p>
         </a>
       </div>
-    </div>
 
-    <div id="logo">
-      <img src="pics/Logo.png" class="nav-logo">
-    </div>
-    <div id="nav-right">
-      <a href="#">Login</a>
-      <button>Sign up</button>
-    </div>
-  </nav>
-
-  <div class="sec-slide">
-    <div class="sec-slide-content">
-      <div class="sec-slide-text">
-        <p>Make your travel</p>
-        <p>wishlist, we’ll do</p>
-        <p>the rest</p>
+      <div id="logo">
+        <a href="LandingPage.html">
+          <img src="photos_hotel/Group.png" class="nav-logo">
+        </a>
       </div>
-      <p>Special offers to suit your plan</p>
+
+      <div id="nav-right">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="photos_hotel/account-25.png" class="nav-settings">
+          </button>
+          <div class="dropdown-content">
+            <button class="tab active login-btn" data-tab="login" id="login-btn-dd">Login</button>
+            <button class="tab sign-up-btn" data-tab="signup" id="signup-btn-dd">Sign up</button>
+          </div>
+        </div>
+        <button class="tab active desktop-btn login-btn" data-tab="login" id="login-btn-desktop">Login</button>
+        <button class="tab desktop-btn sign-up-btn" data-tab="signup" id="signup-btn-desktop">Sign up</button>
+      </div>
+    </nav>
+
+    <div class="auth-modal" id="authModal">
+      <div class="auth-box">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-form="login">Login</button>
+          <button class="auth-tab" data-form="signup">Sign up</button>
+        </div>
+
+        <form class="auth-form active" id="login">
+          <h2>Login</h2>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}">
+          <button type="submit">Login</button>
+        </form>
+
+        <form class="auth-form" id="signup">
+          <h2>Sign up</h2>
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}">
+          <button type="submit">Create account</button>
+        </form>
+      </div>
     </div>
-    <div class="order">
-      <div class="search-section">
-        <div class="search-card">
-          <p class="order-text">Where are you flying?</p>
-          <div id="flights-form">
-            <form class="search-inputs-row">
-              <div class="input-group">
-                <label>From - To</label>
-                <div class="dual-input">
-                  <input list="cities" placeholder="From" class="clean-input">
-                  <span class="separator">-</span>
-                  <input list="cities" placeholder="To" class="clean-input">
-                </div>
-                <datalist id="cities">
-                  <option value="Istanbul">
-                  <option value="Sydney">
-                  <option value="Baku">
-                  <option value="Malé">
-                  <option value="Paris">
-                  <option value="New York">
-                  <option value="London">
-                  <option value="Tokyo">
-                  <option value="Dubai">
-                </datalist>
-              </div>
+  </div>
+  <div id="back-photo">
+    <div id="header-text">
+      <h3>Make your travel wishlist, we'll do the rest</h3>
+      <h4>Special offers to suit your plan</h4>
+    </div>
+  </div>
 
-              <div class="input-group">
-                <label>Trip</label>
-                <select class="clean-input">
-                  <option value="return">Return</option>
-                  <option value="oneway">One-way</option>
-                </select>
-              </div>
+  <div class="search-section">
+    <div class="search-card">
+      <div class="search-tabs">
+        <p><b>Where are you flying?</b></p>
+      </div>
 
-              <div class="input-group">
-                <label>Depart - Return</label>
-                <div class="dual-input">
-                  <input type="date" class="clean-input date-small">
-                  <span class="separator">-</span>
-                  <input type="date" class="clean-input date-small">
-                </div>
-              </div>
+      <div id="flights-form">
+        <form class="search-inputs-row">
 
-              <div class="input-group">
-                <label>Passenger - Class</label>
-                <div class="dual-input">
-                  <input type="number" min="1" value="1" class="clean-input clean-number">
-                  <span class="separator">,</span>
-                  <select class="clean-input">
-                    <option>Economy</option>
-                    <option>Business</option>
-                    <option>First Class</option>
-                  </select>
-                </div>
-              </div>
-            </form>
+          <div class="input-group wide">
+            <label>From - To</label>
+            <div class="dual-input">
+              <input list="cities" placeholder="From" class="clean-input">
+              <span class="separator">-</span>
+              <input list="cities" placeholder="To" class="clean-input">
+            </div>
+            <datalist id="cities">
+              <option value="Istanbul">
+              <option value="Sydney">
+              <option value="Baku">
+              <option value="Malé">
+              <option value="Paris">
+              <option value="New York">
+              <option value="London">
+              <option value="Tokyo">
+              <option value="Dubai">
+            </datalist>
+          </div>
 
-            <div class="search-footer">
-              <a href="#" class="add-promo">+ Add Promo Code</a>
-              <button class="btn-show-flights">
-                <img src="pics/airplane.png" width="16" style="filter: brightness(0);">
-                Show Flights
-              </button>
+          <div class="input-group">
+            <label>Trip</label>
+            <select class="clean-input">
+              <option value="return">Return</option>
+              <option value="oneway">One-way</option>
+            </select>
+          </div>
+
+          <div class="input-group wide">
+            <label>Depart - Return</label>
+            <div class="dual-input">
+              <input type="date" class="clean-input date-small">
+              <span class="separator">-</span>
+              <input type="date" class="clean-input date-small">
             </div>
           </div>
 
-          <div id="stays-form" class="hidden">
-            <form class="search-inputs-row">
-              <div class="input-group" style="flex: 2;">
-                <label>Enter Destination</label>
-                <div class="input-icon-wrapper">
-                  <img src="pics/ion_bed.png" width="16">
-                  <input list="cities" placeholder="Enter Destination" class="clean-input">
-                </div>
-              </div>
-              <div class="input-group">
-                <label>Check In</label>
-                <input type="date" class="clean-input">
-              </div>
-              <div class="input-group">
-                <label>Check Out</label>
-                <input type="date" class="clean-input">
-              </div>
-              <div class="search-footer">
-                <a href="#" class="add-promo">+ Add Promo Code</a>
-                <button class="btn-show-flights">
-              </div>
+          <div class="input-group medium">
+            <label>Passenger - Class</label>
+            <div class="dual-input">
+              <input type="number" min="1" value="1" class="clean-input clean-number">
+              <span class="separator">,</span>
+              <select class="clean-input">
+                <option>Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+              </select>
+            </div>
           </div>
+        </form>
+
+        <div class="search-footer">
+          <a href="#" class="add-promo">+ Add Promo Code</a>
+          <button type="button" class="btn-show-flights">
+            <img src="pics/airplane.png" width="16" style="filter: brightness(0);">
+            Show Flights
+          </button>
         </div>
       </div>
     </div>
   </div>
   <div id="fall-into-travel-1">
-    <div id="fall-into-travel-info">
+    <div class="content-row">
       <div>
         <h2>Fall into travel</h2>
         <p>Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the
           travel tools to get you to your destination.</p>
       </div>
-      <button id="b-see-all">See All</button>
+      <button class="btn-style">See All</button>
     </div>
 
     <div class="fall-travel-cards">
@@ -203,24 +218,25 @@
       </div>
     </div>
   </div>
-
-  </div>
   <div class="places_map">
     <div class="text_map">
-      <h2>Let's go places together</h2>
-      <p>Discover the latest offers and news and start planning your next trip with us.
-      </p>
+      <div>
+        <h2>Let's go places together</h2>
+        <p>Discover the latest offers and news and start planning your next trip with us.</p>
+      </div>
       <button id="btn-see-all">See all</button>
     </div>
   </div>
   <img src="pics/Frame 2608705.png" id="img_map">
 
   <div id="fall-into-travel-2">
-    <h2>Fall into travel</h2>
-    <div id="fall-into-travel-info">
-      <p>Going somewhere to celebrate this season?
-        Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</p>
-      <button id="see-all">See All</button>
+    <div id="fall-into-travel-info-2">
+      <div>
+        <h2>Fall into travel</h2>
+        <p>Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the
+          travel tools to get you to your destination.</p>
+      </div>
+      <button id="see-all-2">See All</button>
     </div>
     <div id="sri-lanka">
       <div id="left-shi-lanka">

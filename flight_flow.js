@@ -55,3 +55,67 @@ subForm.onsubmit = function (event) {
     alert("Спасибо за подписку! Письмо отправлено на: " + emailInput);
   }
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("authModal");
+  const closeBtn = document.getElementById("closeModal");
+  const tabs = document.querySelectorAll(".auth-tab");
+  const forms = document.querySelectorAll(".auth-form");
+  const dropbtn = document.querySelector(".dropbtn");
+  const dropdownContent = document.querySelector(".dropdown-content");
+
+  // DROPDOWN MENU LOGIC
+  dropbtn.addEventListener("click", (e) => {
+    dropdownContent.classList.toggle("show");
+    e.stopPropagation();
+  });
+
+  document.addEventListener("click", () => {
+    dropdownContent.classList.remove("show");
+  });
+
+  // MODAL WINDOW LOGIC
+  document.querySelectorAll(".login-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      openModal("login");
+      dropdownContent.classList.remove("show");
+    });
+  });
+
+  document.querySelectorAll(".sign-up-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      openModal("signup");
+      dropdownContent.classList.remove("show");
+    });
+  });
+
+  function openModal(type) {
+    modal.classList.add("active");
+    switchTab(type);
+  }
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+  function switchTab(type) {
+    tabs.forEach(tab => {
+      tab.classList.toggle("active", tab.dataset.form === type);
+    });
+    forms.forEach(form => {
+      form.classList.toggle("active", form.id === type);
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      switchTab(tab.dataset.form);
+    });
+  });
+});

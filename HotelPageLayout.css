@@ -12,7 +12,10 @@
     font-family: Ramabhadra;
     src: url(HotelPageFonts/Ramabhadra.ttf);
 }
-
+a, button{
+    color: inherit;
+    text-decoration: none;
+}
 /* NAVIGATION */
 #nav{
     display: flex;
